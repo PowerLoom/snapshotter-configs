@@ -7,6 +7,7 @@
       "preload_tasks":[
         "block_transactions"
       ],
+      "bulk_mode": true,
       "processor":{
         "module": "snapshotter.modules.boost.bungee_bridge",
         "class_name": "BungeeBridgeProcessor"
@@ -19,6 +20,7 @@
       "preload_tasks":[
         "block_transactions"
       ],
+      "bulk_mode": true,
       "processor":{
         "module": "snapshotter.modules.boost.owlto_bridge",
         "class_name": "OwltoBridgeProcessor"
@@ -31,6 +33,7 @@
       "preload_tasks":[
         "block_transactions"
       ],
+      "bulk_mode": true,
       "processor":{
         "module": "snapshotter.modules.boost.quickswap_usdc_swap",
         "class_name": "QuickswapUSDCSwapProcessor"
@@ -43,6 +46,7 @@
       "preload_tasks":[
         "block_transactions"
       ],
+      "bulk_mode": true,
       "processor":{
         "module": "snapshotter.modules.boost.quickswap_dai_swap",
         "class_name": "QuickswapDAISwapProcessor"
@@ -55,6 +59,7 @@
       "preload_tasks":[
         "block_transactions"
       ],
+      "bulk_mode": true,
       "processor":{
         "module": "snapshotter.modules.boost.quickswap_eth_usdc_lp",
         "class_name": "QuickswapEthUSDCLPProcessor"
@@ -67,6 +72,7 @@
       "preload_tasks":[
         "block_transactions"
       ],
+      "bulk_mode": true,
       "processor":{
         "module": "snapshotter.modules.boost.safe_create",
         "class_name": "SafeCreateProcessor"
@@ -79,6 +85,7 @@
       "preload_tasks":[
         "block_transactions"
       ],
+      "bulk_mode": true,
       "processor":{
         "module": "snapshotter.modules.boost.safe_add_owner",
         "class_name": "SafeAddOwnerProcessor"

@@ -9,7 +9,7 @@
       ],
       "bulk_mode": true,
       "processor":{
-        "module": "snapshotter.modules.boost.bungee_bridge",
+        "module": "snapshotter.modules.computes.bungee_bridge",
         "class_name": "BungeeBridgeProcessor"
       }
     },
@@ -22,7 +22,7 @@
       ],
       "bulk_mode": true,
       "processor":{
-        "module": "snapshotter.modules.boost.owlto_bridge",
+        "module": "snapshotter.modules.computes.owlto_bridge",
         "class_name": "OwltoBridgeProcessor"
       }
     },
@@ -35,7 +35,7 @@
       ],
       "bulk_mode": true,
       "processor":{
-        "module": "snapshotter.modules.boost.quickswap_usdc_swap",
+        "module": "snapshotter.modules.computes.quickswap_usdc_swap",
         "class_name": "QuickswapUSDCSwapProcessor"
       }
     },
@@ -48,7 +48,7 @@
       ],
       "bulk_mode": true,
       "processor":{
-        "module": "snapshotter.modules.boost.quickswap_dai_swap",
+        "module": "snapshotter.modules.computes.quickswap_dai_swap",
         "class_name": "QuickswapDAISwapProcessor"
       }
     },
@@ -61,7 +61,7 @@
       ],
       "bulk_mode": true,
       "processor":{
-        "module": "snapshotter.modules.boost.quickswap_eth_usdc_lp",
+        "module": "snapshotter.modules.computes.quickswap_eth_usdc_lp",
         "class_name": "QuickswapEthUSDCLPProcessor"
       }
     },
@@ -74,7 +74,7 @@
       ],
       "bulk_mode": true,
       "processor":{
-        "module": "snapshotter.modules.boost.safe_create",
+        "module": "snapshotter.modules.computes.safe_create",
         "class_name": "SafeCreateProcessor"
       }
     },
@@ -87,7 +87,7 @@
       ],
       "bulk_mode": true,
       "processor":{
-        "module": "snapshotter.modules.boost.safe_add_owner",
+        "module": "snapshotter.modules.computes.safe_add_owner",
         "class_name": "SafeAddOwnerProcessor"
       }
     }

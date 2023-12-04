@@ -8,5 +8,20 @@
   "bind": {
     "host": "0.0.0.0",
     "port": 8555
-  }
+  },
+  "protocol_state_contracts": [
+    "0xb24553C414e8FD41fB0F19F04B53bbb22ea5EDCf",
+    "0x77601c88793B9154732A0C1865AF9a69eea254aa"
+  ],
+  "signers": [
+    {
+      "address": "0x5A49e189888Ba38b9D4113Efa071DF9bfE77B10D",
+      "private_key": "0x0000"
+    },
+    {
+      "address": "0xFB0cd42862824030e98D7c60Ef4FeBb3dA44cd09",
+      "private_key": "0x0000"
+    }
+  ],
+	"min_signer_balance_eth": 1
 }

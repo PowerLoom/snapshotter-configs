@@ -1,7 +1,7 @@
 {
   "config": [
     {
-      "project_type": "zkevm:bungee_bridge",
+      "project_type": "eth:tracking_wallet_interaction",
       "projects":[
         ],
       "preload_tasks":[
@@ -9,8 +9,8 @@
       ],
       "bulk_mode": true,
       "processor":{
-        "module": "snapshotter.modules.computes.bungee_bridge",
-        "class_name": "BungeeBridgeProcessor"
+        "module": "snapshotter.modules.tracking_wallet_interaction",
+        "class_name": "TrackingWalletInteractionProcessor"
       }
     }
   ]

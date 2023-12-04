@@ -13,7 +13,7 @@
   "rpc": {
     "full_nodes": [{
       "url": "https://rpc-url",
-      "rate_limit": "10000000/day;2000/minute;100/second"
+      "rate_limit": "100000000/day;15000/minute;300/second"
     }],
     "archive_nodes": [],
     "force_archive_blocks": 100,

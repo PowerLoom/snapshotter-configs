@@ -9,7 +9,7 @@
       ],
       "bulk_mode": true,
       "processor":{
-        "module": "snapshotter.modules.tracking_wallet_interaction",
+        "module": "snapshotter.modules.computes.tracking_wallet_interaction",
         "class_name": "TrackingWalletInteractionProcessor"
       }
     }

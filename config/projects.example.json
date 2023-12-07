@@ -1,0 +1,32 @@
+{
+  "config": [
+    {
+    "project_type": "pairContract_total_reserves",
+      "projects":[
+        "0xa6cc3c2531fdaa6ae1a3ca84c2855806728693e8",
+        "0xcbcdf9626bc03e24f779434178a73a0b4bad62ed",
+        "0x4e68ccd3e89f51c3074ca5072bbac773960dfa36",
+        "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+        "0x1d42064fc4beb5f8aaf85f4617ae8b3b5b8bd801"
+        ],
+      "processor":{
+        "module": "pooler.modules.uniswapv3.pair_total_reserves",
+        "class_name": "PairTotalReservesProcessor"
+      }
+    },
+    {
+      "project_type": "pairContract_trade_volume",
+      "projects":[
+        "0xa6cc3c2531fdaa6ae1a3ca84c2855806728693e8",
+        "0xcbcdf9626bc03e24f779434178a73a0b4bad62ed",
+        "0x4e68ccd3e89f51c3074ca5072bbac773960dfa36",
+        "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+        "0x1d42064fc4beb5f8aaf85f4617ae8b3b5b8bd801"
+        ],
+        "processor":{
+          "module": "pooler.modules.uniswapv3.trade_volume",
+          "class_name": "TradeVolumeProcessor"
+        }
+    }
+  ]
+}

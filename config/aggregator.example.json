@@ -1,0 +1,102 @@
+{
+  "config": [
+    {
+      "project_type": "aggregate_pairContract_24h_trade_volume",
+      "aggregate_on": "SingleProject",
+      "filters": {
+        "projectId": "pairContract_trade_volume"
+      },
+      "processor": {
+        "module": "pooler.modules.uniswapv3.aggregate.single_uniswap_trade_volume_24h",
+        "class_name": "AggregateTradeVolumeProcessor"
+      }
+    },
+    {
+      "project_type": "aggregate_pairContract_7d_trade_volume",
+      "aggregate_on": "SingleProject",
+      "filters": {
+        "projectId": "aggregate_pairContract_24h_trade_volume"
+      },
+      "processor": {
+        "module": "pooler.modules.uniswapv3.aggregate.single_uniswap_trade_volume_7d",
+        "class_name": "AggregateTradeVolumeProcessor"
+      }
+    },
+    {
+      "project_type": "aggregate_24h_top_pairs_lite",
+      "aggregate_on": "MultiProject",
+      "projects_to_wait_for": [
+        "aggregate_pairContract_24h_trade_volume:0xa6cc3c2531fdaa6ae1a3ca84c2855806728693e8:uniswapv3",
+        "pairContract_total_reserves:0xa6cc3c2531fdaa6ae1a3ca84c2855806728693e8:uniswapv3",
+        "aggregate_pairContract_24h_trade_volume:0xcbcdf9626bc03e24f779434178a73a0b4bad62ed:uniswapv3",
+        "pairContract_total_reserves:0xcbcdf9626bc03e24f779434178a73a0b4bad62ed:uniswapv3",
+        "aggregate_pairContract_24h_trade_volume:0x5777d92f208679db4b9778590fa3cab3ac9e2168:uniswapv3",
+        "pairContract_total_reserves:0x5777d92f208679db4b9778590fa3cab3ac9e2168:uniswapv3",
+        "aggregate_pairContract_24h_trade_volume:0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8:uniswapv3",
+        "pairContract_total_reserves:0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8:uniswapv3",
+        "aggregate_pairContract_24h_trade_volume:0xe8c6c9227491c0a8156a0106a0204d881bb7e531:uniswapv3",
+        "pairContract_total_reserves:0xe8c6c9227491c0a8156a0106a0204d881bb7e531:uniswapv3"
+      ],
+      "processor": {
+        "module": "pooler.modules.uniswapv3.aggregate.multi_uniswap_top_pairs_24h",
+        "class_name": "AggregateTopPairsProcessor"
+      }
+    },
+    {
+      "project_type": "aggregate_24h_top_tokens_lite",
+      "aggregate_on": "MultiProject",
+      "projects_to_wait_for": [
+        "aggregate_pairContract_24h_trade_volume:0xa6cc3c2531fdaa6ae1a3ca84c2855806728693e8:uniswapv3",
+        "pairContract_total_reserves:0xa6cc3c2531fdaa6ae1a3ca84c2855806728693e8:uniswapv3",
+        "aggregate_pairContract_24h_trade_volume:0xcbcdf9626bc03e24f779434178a73a0b4bad62ed:uniswapv3",
+        "pairContract_total_reserves:0xcbcdf9626bc03e24f779434178a73a0b4bad62ed:uniswapv3",
+        "aggregate_pairContract_24h_trade_volume:0x5777d92f208679db4b9778590fa3cab3ac9e2168:uniswapv3",
+        "pairContract_total_reserves:0x5777d92f208679db4b9778590fa3cab3ac9e2168:uniswapv3",
+        "aggregate_pairContract_24h_trade_volume:0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8:uniswapv3",
+        "pairContract_total_reserves:0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8:uniswapv3",
+        "aggregate_pairContract_24h_trade_volume:0xe8c6c9227491c0a8156a0106a0204d881bb7e531:uniswapv3",
+        "pairContract_total_reserves:0xe8c6c9227491c0a8156a0106a0204d881bb7e531:uniswapv3"
+      
+      ],
+      "processor": {
+        "module": "pooler.modules.uniswapv3.aggregate.multi_uniswap_top_tokens",
+        "class_name": "AggregateTopTokensProcessor"
+      }
+    },
+    {
+      "project_type": "aggregate_7d_top_pairs_lite",
+      "aggregate_on": "MultiProject",
+      "projects_to_wait_for": [
+        "aggregate_pairContract_7d_trade_volume:0xa6cc3c2531fdaa6ae1a3ca84c2855806728693e8:uniswapv3",
+        "aggregate_pairContract_7d_trade_volume:0xcbcdf9626bc03e24f779434178a73a0b4bad62ed:uniswapv3",
+        "aggregate_pairContract_7d_trade_volume:0x5777d92f208679db4b9778590fa3cab3ac9e2168:uniswapv3",
+        "aggregate_pairContract_7d_trade_volume:0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8:uniswapv3",
+        "aggregate_pairContract_7d_trade_volume:0xe8c6c9227491c0a8156a0106a0204d881bb7e531:uniswapv3"
+      ],
+      "processor": {
+        "module": "pooler.modules.uniswapv3.aggregate.multi_uniswap_top_pairs_7d",
+        "class_name": "AggregateTopPairsProcessor"
+      }
+    },
+    {
+      "project_type": "aggregate_24h_stats_lite",
+      "aggregate_on": "MultiProject",
+      "projects_to_wait_for": [
+        "aggregate_pairContract_24h_trade_volume:0xa6cc3c2531fdaa6ae1a3ca84c2855806728693e8:uniswapv3",
+        "pairContract_total_reserves:0xa6cc3c2531fdaa6ae1a3ca84c2855806728693e8:uniswapv3",
+        "aggregate_pairContract_24h_trade_volume:0xcbcdf9626bc03e24f779434178a73a0b4bad62ed:uniswapv3",
+        "pairContract_total_reserves:0xcbcdf9626bc03e24f779434178a73a0b4bad62ed:uniswapv3",
+        "aggregate_pairContract_24h_trade_volume:0x5777d92f208679db4b9778590fa3cab3ac9e2168:uniswapv3",
+        "pairContract_total_reserves:0x5777d92f208679db4b9778590fa3cab3ac9e2168:uniswapv3",
+        "aggregate_pairContract_24h_trade_volume:0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8:uniswapv3",
+        "pairContract_total_reserves:0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8:uniswapv3",
+        "aggregate_pairContract_24h_trade_volume:0xe8c6c9227491c0a8156a0106a0204d881bb7e531:uniswapv3",
+        "pairContract_total_reserves:0xe8c6c9227491c0a8156a0106a0204d881bb7e531:uniswapv3"
+      ],
+      "processor": {
+        "module": "pooler.modules.uniswapv3.aggregate.multi_uniswap_stats",
+        "class_name": "AggregateStatsProcessor"
+      }
+    }
+  ]
+}

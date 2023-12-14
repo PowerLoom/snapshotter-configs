@@ -9,6 +9,9 @@
         "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
         "0x1d42064fc4beb5f8aaf85f4617ae8b3b5b8bd801"
         ],
+      "preload_tasks":[
+        "block_transactions"
+      ],
       "processor":{
         "module": "pooler.modules.uniswapv3.pair_total_reserves",
         "class_name": "PairTotalReservesProcessor"
@@ -22,6 +25,9 @@
         "0x4e68ccd3e89f51c3074ca5072bbac773960dfa36",
         "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
         "0x1d42064fc4beb5f8aaf85f4617ae8b3b5b8bd801"
+        ],
+        "preload_tasks":[
+          "block_transactions"
         ],
         "processor":{
           "module": "pooler.modules.uniswapv3.trade_volume",

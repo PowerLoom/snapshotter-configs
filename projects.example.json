@@ -61,7 +61,7 @@
         "block_details"
       ],
       "processor": {
-        "module": "pooler.modules.uniswapv3.pair_total_reserves",
+        "module": "snapshotter.modules.computes.pair_total_reserves",
         "class_name": "PairTotalReservesProcessor"
       }
     },
@@ -126,7 +126,7 @@
         "block_details"
       ],
       "processor": {
-        "module": "pooler.modules.uniswapv3.trade_volume",
+        "module": "snapshotter.modules.computes.trade_volume",
         "class_name": "TradeVolumeProcessor"
       }
     }

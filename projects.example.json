@@ -57,7 +57,8 @@
         "0xf8dbd52488978a79dfe6ffbd81a01fc5948bf9ee"
       ],
       "preload_tasks": [
-        "block_transactions"
+        "eth_price",
+        "block_details"
       ],
       "processor": {
         "module": "pooler.modules.uniswapv3.pair_total_reserves",
@@ -121,7 +122,8 @@
         "0xf8dbd52488978a79dfe6ffbd81a01fc5948bf9ee"
       ],
       "preload_tasks": [
-        "block_transactions"
+        "eth_price",
+        "block_details"
       ],
       "processor": {
         "module": "pooler.modules.uniswapv3.trade_volume",

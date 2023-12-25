@@ -22,7 +22,7 @@
       }
     },
     {
-      "project_type": "aggregate_24h_top_pairs_lite",
+      "project_type": "aggregate_24h_top_pairs",
       "aggregate_on": "MultiProject",
       "project_types_to_wait_for": [
         "aggregate_pairContract_24h_trade_volume",
@@ -34,7 +34,7 @@
       }
     },
     {
-      "project_type": "aggregate_24h_top_tokens_lite",
+      "project_type": "aggregate_24h_top_tokens",
       "aggregate_on": "MultiProject",
       "project_types_to_wait_for": [
         "aggregate_pairContract_24h_trade_volume",
@@ -46,7 +46,7 @@
       }
     },
     {
-      "project_type": "aggregate_7d_top_pairs_lite",
+      "project_type": "aggregate_7d_top_pairs",
       "aggregate_on": "MultiProject",
       "project_types_to_wait_for": [
         "aggregate_pairContract_7d_trade_volume"
@@ -57,7 +57,7 @@
       }
     },
     {
-      "project_type": "aggregate_24h_stats_lite",
+      "project_type": "aggregate_24h_stats",
       "aggregate_on": "MultiProject",
       "project_types_to_wait_for": [
         "aggregate_pairContract_24h_trade_volume",

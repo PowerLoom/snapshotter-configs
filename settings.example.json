@@ -10,6 +10,7 @@
     "public_rate_limit": "20000/day;300/minute;10/second"
   },
   "instance_id": "account-address",
+  "signer_private_key": "signer-account-private-key",
   "rpc": {
     "full_nodes": [{
       "url": "https://rpc-url",
@@ -41,9 +42,6 @@
       },
       "callbacks": {
         "exchange": "powerloom-backend-callbacks"
-      },
-      "commit_payload": {
-        "exchange": "powerloom-backend-commit-payload"
       },
       "event_detector": {
         "exchange": "powerloom-backend-event-detector"
@@ -81,10 +79,15 @@
   "pair_contract_abi": "snapshotter/static/abis/UniswapV3Pool.json",
   "protocol_state": {
     "abi": "snapshotter/static/abis/ProtocolContract.json",
-    "address": "protocol-state-contract"
+    "address": "protocol-state-contract",
+    "deadline_buffer": 60
+  },
+  "relayer": {
+    "host": "https://relayer-url",
+    "endpoint": "/submitSnapshot"
   },
   "callback_worker_config": {
-    "num_delegate_workers": 0,
+    "num_delegate_workers": 8,
     "num_snapshot_workers": 8,
     "num_aggregation_workers": 12
   },

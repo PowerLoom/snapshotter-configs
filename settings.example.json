@@ -38,16 +38,16 @@
     "port": 5672,
     "setup": {
       "core": {
-        "exchange": "powerloom-backend"
+        "exchange": "backend"
       },
       "callbacks": {
-        "exchange": "powerloom-backend-callbacks"
+        "exchange": "backend-callbacks"
       },
       "event_detector": {
-        "exchange": "powerloom-backend-event-detector"
+        "exchange": "backend-event-detector"
       },
       "delegated_worker": {
-        "exchange": "powerloom-backend-delegated-worker"
+        "exchange": "backend-delegated-worker"
       }
     }
   },

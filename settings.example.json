@@ -2,19 +2,13 @@
   "namespace": "relevant-namespace",
   "core_api": {
     "host": "0.0.0.0",
-    "port": 8002,
-    "auth": {
-      "enabled": false,
-      "header_key": "X-API-KEY"
-    },
-    "public_rate_limit": "20000/day;300/minute;10/second"
+    "port": 8002
   },
   "instance_id": "account-address",
   "signer_private_key": "signer-account-private-key",
   "rpc": {
     "full_nodes": [{
-      "url": "https://rpc-url",
-      "rate_limit": "100000000/day;20000/minute;1000/second"
+      "url": "https://rpc-url"
     }],
     "archive_nodes": [],
     "force_archive_blocks": 100,
@@ -31,50 +25,15 @@
   "rlimit": {
     "file_descriptors": 2048
   },
-  "rabbitmq": {
-    "user": "guest",
-    "password": "guest",
-    "host": "rabbitmq",
-    "port": 5672,
-    "setup": {
-      "core": {
-        "exchange": "backend"
-      },
-      "callbacks": {
-        "exchange": "backend-callbacks"
-      },
-      "event_detector": {
-        "exchange": "backend-event-detector"
-      },
-      "delegated_worker": {
-        "exchange": "backend-delegated-worker"
-      }
-    }
-  },
   "reporting": {
     "slack_url": "https://slack-reporting-url",
     "service_url": "https://powerloom-reporting-url"
-  },
-  "redis": {
-    "host": "redis",
-    "port": 6379,
-    "db": 0,
-    "password": null,
-    "ssl": false,
-    "cluster_mode": false
-  },
-  "redis_reader": {
-    "host": "redis",
-    "port": 6379,
-    "db": 0,
-    "password": null
   },
   "logs": {
     "trace_enabled": false,
     "write_to_files": true
   },
   "projects_config_path": "config/projects.json",
-  "aggregator_config_path": "config/aggregator.json",
   "preloader_config_path": "config/preloader.json",
   "pair_contract_abi": "snapshotter/static/abis/UniswapV3Pool.json",
   "protocol_state": {
@@ -85,11 +44,6 @@
   "relayer": {
     "host": "https://relayer-url",
     "endpoint": "/submitSnapshot"
-  },
-  "callback_worker_config": {
-    "num_delegate_workers": 8,
-    "num_snapshot_workers": 8,
-    "num_aggregation_workers": 12
   },
   "ipfs": {
     "url": "ipfs-writer-url",
@@ -133,8 +87,7 @@
   },
   "anchor_chain_rpc": {
     "full_nodes": [{
-      "url": "https://prost-rpc-url",
-      "rate_limit": "100000000/day;20000/minute;1000/second"
+      "url": "https://prost-rpc-url"
     }],
     "retry": 5,
     "request_time_out": 5,

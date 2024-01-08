@@ -12,13 +12,6 @@
           "module": "snapshotter.modules.computes.trade_volume",
           "class_name": "TradeVolumeProcessor"
         }
-    },
-    {
-      "project_type": "pairContract_factory_monitor",
-      "processor":{
-          "module": "snapshotter.modules.computes.factory_monitor",
-          "class_name": "FactoryMonitorProcessor"
-        }
     }
   ]
 }

@@ -34,7 +34,6 @@
     "write_to_files": true
   },
   "projects_config_path": "config/projects.json",
-  "preloader_config_path": "config/preloader.json",
   "pair_contract_abi": "snapshotter/static/abis/UniswapV3Pool.json",
   "protocol_state": {
     "abi": "snapshotter/static/abis/ProtocolContract.json",
@@ -77,7 +76,6 @@
   },
   "web3storage":{
     "upload_snapshots": false,
-    "upload_aggregates": true,
     "url": "https://api.web3.storage",
     "upload_url_suffix": "/upload",
     "api_token": "web3-storage-token",

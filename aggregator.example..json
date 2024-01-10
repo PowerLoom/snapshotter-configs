@@ -1,4 +1,17 @@
 {
   "config": [
+    {
+      "project_type": "aggregate_top_assets",
+      "aggregate_on": "MultiProject",
+      "projects_to_wait_for": [
+        "poolContract_total_supply:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48:aavev3",
+        "poolContract_total_supply:0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2:aavev3",
+        "poolContract_total_supply:0x2260fac5e5542a773aa44fbcfedf7c193bc2c599:aavev3"
+      ],
+      "processor": {
+        "module": "snapshotter.modules.computes.aggregate.multi_aave_top_assets",
+        "class_name": "AggreagateTopAssetsProcessor"
+      }
+    }
   ]
 }

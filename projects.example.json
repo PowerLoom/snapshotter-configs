@@ -11,7 +11,9 @@
         "module": "snapshotter.modules.computes.pool_total_supply",
         "class_name": "AssetTotalSupplyProcessor"
       },
-      "preload_tasks":[]
+      "preload_tasks":[
+        "bulk_price"
+      ]
     }
   ]
 }

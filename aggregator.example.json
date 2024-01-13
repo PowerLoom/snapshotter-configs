@@ -6,7 +6,17 @@
       "projects_to_wait_for": [
         "poolContract_total_supply:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48:aavev3",
         "poolContract_total_supply:0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2:aavev3",
-        "poolContract_total_supply:0x2260fac5e5542a773aa44fbcfedf7c193bc2c599:aavev3"
+        "poolContract_total_supply:0x2260fac5e5542a773aa44fbcfedf7c193bc2c599:aavev3",
+        "poolContract_total_supply:0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0:aavev3",
+        "poolContract_total_supply:0x6b175474e89094c44da98b954eedeac495271d0f:aavev3",
+        "poolContract_total_supply:0x514910771af9ca656af840dff83e8264ecf986ca:aavev3",
+        "poolContract_total_supply:0xae78736cd615f374d3085123a210448e74fc6393:aavev3",
+        "poolContract_total_supply:0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9:aavev3",
+        "poolContract_total_supply:0xbe9895146f7af43049ca1c1ae358b0541ea49704:aavev3",
+        "poolContract_total_supply:0xd533a949740bb3306d119cc777fa900ba034cd52:aavev3",
+        "poolContract_total_supply:0xba100000625a3754423978a60c9317c58a424e3d:aavev3",
+        "poolContract_total_supply:0x1f9840a85d5af5bf1d1762f925bdaddc4201f984:aavev3",
+        "poolContract_total_supply:0x111111111117dc0aa78b770fa6a738034120c302:aavev3"
       ],
       "processor": {
         "module": "snapshotter.modules.computes.aggregate.multi_aave_top_assets",
@@ -19,7 +29,17 @@
       "projects_to_wait_for": [
         "poolContract_total_supply:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48:aavev3",
         "poolContract_total_supply:0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2:aavev3",
-        "poolContract_total_supply:0x2260fac5e5542a773aa44fbcfedf7c193bc2c599:aavev3"
+        "poolContract_total_supply:0x2260fac5e5542a773aa44fbcfedf7c193bc2c599:aavev3",
+        "poolContract_total_supply:0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0:aavev3",
+        "poolContract_total_supply:0x6b175474e89094c44da98b954eedeac495271d0f:aavev3",
+        "poolContract_total_supply:0x514910771af9ca656af840dff83e8264ecf986ca:aavev3",
+        "poolContract_total_supply:0xae78736cd615f374d3085123a210448e74fc6393:aavev3",
+        "poolContract_total_supply:0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9:aavev3",
+        "poolContract_total_supply:0xbe9895146f7af43049ca1c1ae358b0541ea49704:aavev3",
+        "poolContract_total_supply:0xd533a949740bb3306d119cc777fa900ba034cd52:aavev3",
+        "poolContract_total_supply:0xba100000625a3754423978a60c9317c58a424e3d:aavev3",
+        "poolContract_total_supply:0x1f9840a85d5af5bf1d1762f925bdaddc4201f984:aavev3",
+        "poolContract_total_supply:0x111111111117dc0aa78b770fa6a738034120c302:aavev3"
       ],
       "processor": {
         "module": "snapshotter.modules.computes.aggregate.multi_aave_stats",

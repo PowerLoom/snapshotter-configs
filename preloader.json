@@ -9,6 +9,11 @@
           "task_type": "bulk_price",
           "module": "snapshotter.modules.computes.utils.preloaders.pricing.preloader",
           "class_name": "BulkPricePreloader"
+        },
+        {
+          "task_type": "bulk_asset",
+          "module": "snapshotter.modules.computes.utils.preloaders.asset_data.preloader",
+          "class_name": "BulkAssetDataPreloader"
         }
     ],
     "delegate_tasks": [

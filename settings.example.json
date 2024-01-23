@@ -10,17 +10,18 @@
     "public_rate_limit": "20000/day;300/minute;10/second"
   },
   "instance_id": "account-address",
+  "signer_private_key": "signer-account-private-key",
   "rpc": {
     "full_nodes": [{
       "url": "https://rpc-url",
-      "rate_limit": "10000000/day;2000/minute;100/second"
+      "rate_limit": "100000000/day;20000/minute;1000/second"
     }],
     "archive_nodes": [],
     "force_archive_blocks": 100,
     "retry": 5,
     "request_time_out": 5,
     "skip_epoch_threshold_blocks": 30,
-    "polling_interval": 15,
+    "polling_interval": 10,
     "connection_limits":{
       "max_connections": 100,
       "max_keepalive_connections": 50,
@@ -37,19 +38,16 @@
     "port": 5672,
     "setup": {
       "core": {
-        "exchange": "powerloom-backend"
+        "exchange": "backend"
       },
       "callbacks": {
-        "exchange": "powerloom-backend-callbacks"
-      },
-      "commit_payload": {
-        "exchange": "powerloom-backend-commit-payload"
+        "exchange": "backend-callbacks"
       },
       "event_detector": {
-        "exchange": "powerloom-backend-event-detector"
+        "exchange": "backend-event-detector"
       },
       "delegated_worker": {
-        "exchange": "powerloom-backend-delegated-worker"
+        "exchange": "backend-delegated-worker"
       }
     }
   },
@@ -81,10 +79,15 @@
   "pair_contract_abi": "snapshotter/static/abis/UniswapV3Pool.json",
   "protocol_state": {
     "abi": "snapshotter/static/abis/ProtocolContract.json",
-    "address": "protocol-state-contract"
+    "address": "protocol-state-contract",
+    "deadline_buffer": 60
+  },
+  "relayer": {
+    "host": "https://relayer-url",
+    "endpoint": "/submitSnapshot"
   },
   "callback_worker_config": {
-    "num_delegate_workers": 0,
+    "num_delegate_workers": 8,
     "num_snapshot_workers": 8,
     "num_aggregation_workers": 12
   },
@@ -131,7 +134,7 @@
   "anchor_chain_rpc": {
     "full_nodes": [{
       "url": "https://prost-rpc-url",
-      "rate_limit": "100000000/day;18000/minute;300/second"
+      "rate_limit": "100000000/day;20000/minute;1000/second"
     }],
     "retry": 5,
     "request_time_out": 5,

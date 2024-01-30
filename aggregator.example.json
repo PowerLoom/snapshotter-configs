@@ -1,13 +1,13 @@
 {
   "config": [
     {
-      "project_type": "aggregate_poolContract_6h_apr_avg",
+      "project_type": "aggregate_poolContract_6h_apr",
       "aggregate_on": "SingleProject",
       "filters": {
         "projectId": "poolContract_total_supply"
       },
       "processor": {
-        "module": "snapshotter.modules.computes.aggregate.single_aave_apr",
+        "module": "snapshotter.modules.computes.aggregate.single_aave_apr_6h",
         "class_name": "AggreagateSingleAprProcessor"
       }
     },

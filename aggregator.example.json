@@ -12,6 +12,17 @@
       }
     },
     {
+      "project_type": "aggregate_poolContract_24h_apr",
+      "aggregate_on": "SingleProject",
+      "filters": {
+        "projectId": "aggregate_poolContract_6h_apr"
+      },
+      "processor": {
+        "module": "snapshotter.modules.computes.aggregate.single_aave_apr_24h",
+        "class_name": "AggreagateSingleAprProcessor"
+      }
+    },
+    {
       "project_type": "aggregate_top_assets",
       "aggregate_on": "MultiProject",
       "projects_to_wait_for": [

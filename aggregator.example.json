@@ -23,6 +23,17 @@
       }
     },
     {
+      "project_type": "aggregate_poolContract_volume_24h",
+      "aggregate_on": "SingleProject",
+      "filters": {
+        "projectId": "poolContract_supply_volume"
+      },
+      "processor": {
+        "module": "snapshotter.modules.computes.aggregate.single_aave_volume_24h",
+        "class_name": "AggregateSupplyVolumeProcessor"
+      }
+    },
+    {
       "project_type": "aggregate_top_assets",
       "aggregate_on": "MultiProject",
       "projects_to_wait_for": [

@@ -14,6 +14,11 @@
           "task_type": "bulk_asset",
           "module": "snapshotter.modules.computes.utils.preloaders.asset_data.preloader",
           "class_name": "BulkAssetDataPreloader"
+        },
+        {
+          "task_type": "bulk_event",
+          "module": "snapshotter.modules.computes.utils.preloaders.volume_events.preloader",
+          "class_name": "AaveBulkVolumeEventsPreloader"
         }
     ],
     "delegate_tasks": [

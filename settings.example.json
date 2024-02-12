@@ -6,6 +6,7 @@
   },
   "instance_id": "account-address",
   "signer_private_key": "signer-account-private-key",
+  "slot_id": "slot-id",
   "rpc": {
     "full_nodes": [{
       "url": "https://rpc-url"

@@ -95,5 +95,6 @@
       "max_keepalive_connections": 50,
       "keepalive_expiry": 300
     }
-  }
+  },
+  "node_version": "v0.1.4"
 }

@@ -30,7 +30,7 @@
         "0x3432b6a60d23ca0dfca7761b7ab56459d9c964d0",
         "0xf939e0a03fb07f59a73314e73794be0e57ac1b4e",
         "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2",
-        "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8"
+        "0x6c3ea9036406852006290770bedfcaba0e23a0e8"
         ],
       "processor":{
         "module": "snapshotter.modules.computes.pool_total_supply",
@@ -71,7 +71,7 @@
         "0x3432b6a60d23ca0dfca7761b7ab56459d9c964d0",
         "0xf939e0a03fb07f59a73314e73794be0e57ac1b4e",
         "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2",
-        "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8"
+        "0x6c3ea9036406852006290770bedfcaba0e23a0e8"
         ],
       "processor":{
         "module": "snapshotter.modules.computes.pool_supply_volume",

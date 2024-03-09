@@ -79,15 +79,15 @@
   "projects_config_path": "config/projects.json",
   "aggregator_config_path": "config/aggregator.json",
   "preloader_config_path": "config/preloader.json",
-  "pair_contract_abi": "snapshotter/static/abis/UniswapV3Pool.json",
+  "pair_contract_abi": "snapshotter/static/abis/UniswapV2Pair.json",
   "protocol_state": {
     "abi": "snapshotter/static/abis/ProtocolContract.json",
     "address": "protocol-state-contract"
   },
   "callback_worker_config": {
-    "num_delegate_workers": 0,
-    "num_snapshot_workers": 8,
-    "num_aggregation_workers": 12
+    "num_delegate_workers": 8,
+    "num_snapshot_workers": 4,
+    "num_aggregation_workers": 4
   },
   "ipfs": {
     "url": "ipfs-writer-url",

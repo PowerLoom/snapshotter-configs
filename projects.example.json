@@ -1,25 +1,17 @@
 {
-  "config": [{
-      "project_type": "pairContract_pair_total_reserves",
-      "preload_tasks":[
-        "eth_price",
-        "block_details"
-      ],
-      "processor":{
-        "module": "snapshotter.modules.computes.pair_total_reserves",
-        "class_name": "PairTotalReservesProcessor"
-      }
-    },
+  "config": [
     {
-      "project_type": "pairContract_trade_volume",
+      "project_type": "eth:tracking_wallet_interaction",
+      "projects":[
+        ],
       "preload_tasks":[
-        "eth_price",
-        "block_details"
+        "block_transactions"
       ],
-        "processor":{
-          "module": "snapshotter.modules.computes.trade_volume",
-          "class_name": "TradeVolumeProcessor"
-        }
+      "bulk_mode": true,
+      "processor":{
+        "module": "snapshotter.modules.computes.tracking_wallet_interaction",
+        "class_name": "TrackingWalletInteractionProcessor"
+      }
     }
   ]
 }

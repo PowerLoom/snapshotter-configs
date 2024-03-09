@@ -10,6 +10,7 @@
     "public_rate_limit": "20000/day;300/minute;10/second"
   },
   "instance_id": "account-address",
+  "slot_id": "slot-id",
   "rpc": {
     "full_nodes": [{
       "url": "https://rpc-url",
@@ -140,5 +141,7 @@
       "max_keepalive_connections": 50,
       "keepalive_expiry": 300
     }
-  }
+  },
+  "node_version": "v0.1.5"
+
 }

@@ -81,7 +81,7 @@
   "pair_contract_abi": "snapshotter/static/abis/UniswapV2Pair.json",
   "protocol_state": {
     "abi": "snapshotter/static/abis/ProtocolContract.json",
-    "address": "0xd532ad02DDB0BEF52B20967D607c0816b3E64450"
+    "address": "protocol-state-contract"
   },
   "callback_worker_config": {
     "num_delegate_workers": 0,

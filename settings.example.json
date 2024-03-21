@@ -78,7 +78,7 @@
   "projects_config_path": "config/projects.json",
   "aggregator_config_path": "config/aggregator.json",
   "preloader_config_path": "config/preloader.json",
-  "pair_contract_abi": "snapshotter/static/abis/UniswapV2Pair.json",
+  "pair_contract_abi": "snapshotter/static/abis/UniswapV3Pool.json",
   "protocol_state": {
     "abi": "snapshotter/static/abis/ProtocolContract.json",
     "address": "protocol-state-contract"

@@ -23,6 +23,7 @@
       "keepalive_expiry": 300
     }
   },
+  "simulation_submission_url": "https://snapshotter-api.powerloom.io",
   "rlimit": {
     "file_descriptors": 2048
   },

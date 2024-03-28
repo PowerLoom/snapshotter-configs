@@ -40,7 +40,7 @@
   "protocol_state": {
     "abi": "snapshotter/static/abis/ProtocolContract.json",
     "address": "protocol-state-contract",
-    "deadline_buffer": 60
+    "deadline_buffer": 120
   },
   "relayer": {
     "host": "https://relayer-url",

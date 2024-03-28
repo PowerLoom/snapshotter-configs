@@ -97,5 +97,5 @@
       "keepalive_expiry": 300
     }
   },
-  "node_version": "v0.1.6"
+  "node_version": "v0.2.0"
 }

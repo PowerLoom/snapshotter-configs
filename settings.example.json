@@ -23,7 +23,7 @@
       "keepalive_expiry": 300
     }
   },
-  "simulation_submission_url": "https://snapshotter-api-staging.powerloom.io",
+  "simulation_submission_url": "https://snapshotter-api.powerloom.io",
   "rlimit": {
     "file_descriptors": 2048
   },
@@ -97,5 +97,5 @@
       "keepalive_expiry": 300
     }
   },
-  "node_version": "v0.2.0"
+  "node_version": "v0.2.1"
 }

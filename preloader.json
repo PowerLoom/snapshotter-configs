@@ -1,0 +1,32 @@
+{
+    "preloaders": [
+        {
+          "task_type": "block_details",
+          "module": "snapshotter.utils.preloaders.block_details.preloader",
+          "class_name": "BlockDetailsPreloader"
+        },
+        {
+          "task_type": "bulk_price",
+          "module": "snapshotter.modules.computes.utils.preloaders.pricing.preloader",
+          "class_name": "BulkPricePreloader"
+        },
+        {
+          "task_type": "bulk_asset",
+          "module": "snapshotter.modules.computes.utils.preloaders.asset_data.preloader",
+          "class_name": "BulkAssetDataPreloader"
+        },
+        {
+          "task_type": "bulk_event",
+          "module": "snapshotter.modules.computes.utils.preloaders.volume_events.preloader",
+          "class_name": "AaveBulkVolumeEventsPreloader"
+        }
+    ],
+    "delegate_tasks": [
+        {
+          "task_type": "txreceipt",
+          "module": "snapshotter.utils.preloaders.tx_receipts.delegated_worker.tx_receipts",
+          "class_name": "TxReceiptProcessor"
+        }
+    ],
+    "timeout": 60
+}

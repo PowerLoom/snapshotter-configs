@@ -16,13 +16,14 @@
     "retry": 5,
     "request_time_out": 5,
     "skip_epoch_threshold_blocks": 30,
-    "polling_interval": 10,
+    "polling_interval": 3,
     "connection_limits":{
       "max_connections": 100,
       "max_keepalive_connections": 50,
       "keepalive_expiry": 300
     }
   },
+  "simulation_submission_url": "https://snapshotter-api.powerloom.io",
   "rlimit": {
     "file_descriptors": 2048
   },
@@ -42,7 +43,7 @@
   "protocol_state": {
     "abi": "snapshotter/static/abis/ProtocolContract.json",
     "address": "protocol-state-contract",
-    "deadline_buffer": 60
+    "deadline_buffer": 120
   },
   "relayer": {
     "host": "https://relayer-url",
@@ -99,5 +100,5 @@
       "keepalive_expiry": 300
     }
   },
-  "node_version": "v0.1.4"
+  "node_version": "v0.2.1"
 }

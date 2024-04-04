@@ -10,17 +10,18 @@
     "public_rate_limit": "20000/day;300/minute;10/second"
   },
   "instance_id": "account-address",
+  "slot_id": "slot-id",
   "rpc": {
     "full_nodes": [{
       "url": "https://rpc-url",
-      "rate_limit": "100000000/day;15000/minute;300/second"
+      "rate_limit": "100000000/day;20000/minute;1000/second"
     }],
     "archive_nodes": [],
     "force_archive_blocks": 100,
     "retry": 5,
     "request_time_out": 5,
     "skip_epoch_threshold_blocks": 30,
-    "polling_interval": 15,
+    "polling_interval": 3,
     "connection_limits":{
       "max_connections": 100,
       "max_keepalive_connections": 50,
@@ -85,7 +86,7 @@
   },
   "callback_worker_config": {
     "num_delegate_workers": 8,
-    "num_snapshot_workers": 2,
+    "num_snapshot_workers": 4,
     "num_aggregation_workers": 4
   },
   "ipfs": {
@@ -131,7 +132,7 @@
   "anchor_chain_rpc": {
     "full_nodes": [{
       "url": "https://prost-rpc-url",
-      "rate_limit": "100000000/day;18000/minute;300/second"
+      "rate_limit": "100000000/day;20000/minute;1000/second"
     }],
     "retry": 5,
     "request_time_out": 5,
@@ -140,5 +141,7 @@
       "max_keepalive_connections": 50,
       "keepalive_expiry": 300
     }
-  }
+  },
+  "node_version": "v0.1.5"
+
 }

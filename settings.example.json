@@ -20,7 +20,7 @@
     "retry": 5,
     "request_time_out": 5,
     "skip_epoch_threshold_blocks": 30,
-    "polling_interval": 10,
+    "polling_interval": 8,
     "connection_limits":{
       "max_connections": 100,
       "max_keepalive_connections": 50,
@@ -78,7 +78,7 @@
   "projects_config_path": "config/projects.json",
   "aggregator_config_path": "config/aggregator.json",
   "preloader_config_path": "config/preloader.json",
-  "pair_contract_abi": "snapshotter/static/abis/UniswapV2Pair.json",
+  "pair_contract_abi": "snapshotter/static/abis/UniswapV3Pool.json",
   "protocol_state": {
     "abi": "snapshotter/static/abis/ProtocolContract.json",
     "address": "protocol-state-contract"
@@ -89,15 +89,15 @@
     "num_aggregation_workers": 12
   },
   "ipfs": {
-    "url": "/dns/ipfs/tcp/5001",
+    "url": "ipfs-writer-url",
     "url_auth": {
-      "apiKey": "",
-      "apiSecret": ""
+      "apiKey": "ipfs-writer-key",
+      "apiSecret": "ipfs-writer-secret"
     },
-    "reader_url": "/dns/ipfs/tcp/5001",
+    "reader_url": "ipfs-reader-url",
     "reader_url_auth": {
-      "apiKey": "",
-      "apiSecret": ""
+      "apiKey": "ipfs-reader-key",
+      "apiSecret": "ipfs-reader-secret"
     },
     "write_rate_limit": {
       "req_per_sec": 10,

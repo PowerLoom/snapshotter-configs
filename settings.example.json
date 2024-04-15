@@ -29,7 +29,7 @@
     }
   },
   "rlimit": {
-    "file_descriptors": 4096
+    "file_descriptors": 40960
   },
   "snapshot_submissions": {
     "enabled": true,

@@ -1,5 +1,6 @@
 {
   "namespace": "relevant-namespace",
+  "signer_private_key": "signer-account-private-key",
   "core_api": {
     "host": "0.0.0.0",
     "port": 8002,
@@ -12,8 +13,7 @@
   "instance_id": "account-address",
   "rpc": {
     "full_nodes": [{
-      "url": "https://rpc-url",
-      "rate_limit": "100000000/day;20000/minute;1000/second"
+      "url": "https://rpc-url"
     }],
     "archive_nodes": [],
     "force_archive_blocks": 100,
@@ -21,6 +21,7 @@
     "request_time_out": 5,
     "skip_epoch_threshold_blocks": 30,
     "polling_interval": 3,
+    "semaphore_value": 20,
     "connection_limits":{
       "max_connections": 100,
       "max_keepalive_connections": 50,
@@ -29,6 +30,15 @@
   },
   "rlimit": {
     "file_descriptors": 4096
+  },
+  "snapshot_submissions": {
+    "enabled": true,
+    "signers": [
+      {
+        "address": "signer-address",
+        "private_key": "signer-private-key"
+      }
+    ]
   },
   "rabbitmq": {
     "user": "guest",
@@ -81,7 +91,8 @@
   "pair_contract_abi": "snapshotter/static/abis/UniswapV2Pair.json",
   "protocol_state": {
     "abi": "snapshotter/static/abis/ProtocolContract.json",
-    "address": "protocol-state-contract"
+    "address": "protocol-state-contract",
+    "deadline_buffer": 1000
   },
   "callback_worker_config": {
     "num_delegate_workers": 0,
@@ -130,8 +141,7 @@
   },
   "anchor_chain_rpc": {
     "full_nodes": [{
-      "url": "https://prost-rpc-url",
-      "rate_limit": "100000000/day;20000/minute;1000/second"
+      "url": "https://prost-rpc-url"
     }],
     "retry": 5,
     "request_time_out": 5,

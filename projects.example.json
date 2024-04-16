@@ -1,16 +1,16 @@
 {
   "config": [
     {
-      "project_type": "eth:tracking_wallet_interaction",
+      "project_type": "eth:price_tracking",
       "projects":[
         ],
       "preload_tasks":[
-        "block_transactions"
+        "eth_price"
       ],
       "bulk_mode": true,
       "processor":{
-        "module": "snapshotter.modules.computes.tracking_wallet_interaction",
-        "class_name": "TrackingWalletInteractionProcessor"
+        "module": "snapshotter.modules.computes.eth_price_tracking",
+        "class_name": "EthPriceProcessor"
       }
     }
   ]

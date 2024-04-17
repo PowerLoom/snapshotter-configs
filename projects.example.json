@@ -1,7 +1,7 @@
 {
     "config": [
     {
-        "project_type": "collectionContract_transfers",
+        "project_type": "collectionContract_erc721",
         "preload_tasks":[
           "block_details"
         ],
@@ -13,9 +13,22 @@
             "0x0000000000c26fabfe894d13233d5ec73f61cc72"
         ],
         "processor":{
-          "module": "snapshotter.modules.computes.nft_mint",
-          "class_name": "PairTotalReservesProcessor"
+          "module": "snapshotter.modules.computes.erc721_tracking",
+          "class_name": "ERC721TransferProcessor"
         }
+    },
+    {
+      "project_type": "collectionContract_erc1155",
+      "preload_tasks":[
+        "block_details"
+      ],
+      "projects":[
+        "0xd4416b13d2b3a9abae7acd5d6c2bbdbe25686401"
+      ],
+      "processor":{
+        "module": "snapshotter.modules.computes.erc1155_tracking",
+        "class_name": "ERC1155TransferProcessor"
+      }
     }
-    ]
+  ]
 }

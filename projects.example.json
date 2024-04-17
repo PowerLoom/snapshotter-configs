@@ -1,0 +1,21 @@
+{
+    "config": [
+    {
+        "project_type": "collectionContract_transfers",
+        "preload_tasks":[
+          "block_details"
+        ],
+        "projects":[
+            "0xe96d3a6b52993377c476de24d86871023046787a",
+            "0x932261f9fc8da46c4a22e31b45c4de60623848bf",
+            "0x75cd3f538c091c1d514ab1ad9832f54198cacec0",
+            "0x36e5913bf48ccbd361875d09c0a20a4c144da896",
+            "0x0000000000c26fabfe894d13233d5ec73f61cc72"
+        ],
+        "processor":{
+          "module": "snapshotter.modules.computes.nft_mint",
+          "class_name": "PairTotalReservesProcessor"
+        }
+    }
+    ]
+}

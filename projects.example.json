@@ -1,0 +1,28 @@
+{
+  "config": [
+    {
+      "project_type": "nectarFinance:nft_loan_tracking",
+      "projects": [],
+      "preload_tasks": [
+        "block_transactions"
+      ],
+      "bulk_mode": true,
+      "processor": {
+        "module": "snapshotter.modules.computes.nft_loan_tracker",
+        "class_name": "NFTLoanTrackerProcessor"
+      }
+    },
+    {
+      "project_type": "nectarFinance:nft_collateral_monitor",
+      "projects": [],
+      "preload_tasks": [
+        "block_transactions"
+      ],
+      "bulk_mode": true,
+      "processor": {
+        "module": "snapshotter.modules.computes.nft_collateral_monitor",
+        "class_name": "NFTCollateralMonitorProcessor"
+      }
+    }
+  ]
+}

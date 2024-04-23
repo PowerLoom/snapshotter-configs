@@ -3,10 +3,6 @@
     {
       "project_type": "pairContract_total_reserves",
       "projects": [
-        "0x277667eb3e34f134adf870be9550e9f323d0dc24",
-        "0xa850478adaace4c08fc61de44d8cf3b64f359bec",
-        "0x8c0411f2ad5470a66cb2e9c64536cfb8dcd54d51",
-        "0x055284a4ca6532ecc219ac06b577d540c686669d",
         "0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640",
         "0xcbcdf9626bc03e24f779434178a73a0b4bad62ed",
         "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
@@ -37,11 +33,9 @@
         "0x510100d5143e011db24e2aa38abe85d73d5b2177",
         "0x3afdc5e6dfc0b0a507a8e023c9dce2cafc310316",
         "0x4a80e5796794153f3f3b5c5ed45a15ab4c548738",
-        "0x01a8227d4e7c3068ad1000c97a059af5c5fa3476",
         "0xac4b3dacb91461209ae9d41ec517c2b9cb1b7daf",
         "0x9db9e0e53058c89e5b94e29621a205198648425b",
         "0xe42318ea3b998e8355a3da364eb9d48ec725eb45",
-        "0x1a098a748c8167f023e79986b095843ba0c8db03",
         "0x5764a6f2212d502bc5970f9f129ffcd61e5d7563",
         "0x4b5ab61593a2401b1075b90c04cbcdd3f87ce011",
         "0xe15e6583425700993bd08f51bf6e7b73cd5da91b",
@@ -52,9 +46,7 @@
         "0x6c4c7f46d9d4ef6bc5c9e155f011ad19fc4ef321",
         "0xcd423f3ab39a11ff1d9208b7d37df56e902c932b",
         "0x99132b53ab44694eeb372e87bced3929e4ab8456",
-        "0x69d91b94f0aaf8e8a2586909fa77a5c2c89818d5",
-        "0x86d257cdb7bc9c0df10e84c8709697f92770b335",
-        "0xf8dbd52488978a79dfe6ffbd81a01fc5948bf9ee"
+        "0x69d91b94f0aaf8e8a2586909fa77a5c2c89818d5"
       ],
       "preload_tasks": [
         "eth_price",
@@ -68,10 +60,6 @@
     {
       "project_type": "pairContract_trade_volume",
       "projects": [
-        "0x277667eb3e34f134adf870be9550e9f323d0dc24",
-        "0xa850478adaace4c08fc61de44d8cf3b64f359bec",
-        "0x8c0411f2ad5470a66cb2e9c64536cfb8dcd54d51",
-        "0x055284a4ca6532ecc219ac06b577d540c686669d",
         "0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640",
         "0xcbcdf9626bc03e24f779434178a73a0b4bad62ed",
         "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
@@ -102,11 +90,9 @@
         "0x510100d5143e011db24e2aa38abe85d73d5b2177",
         "0x3afdc5e6dfc0b0a507a8e023c9dce2cafc310316",
         "0x4a80e5796794153f3f3b5c5ed45a15ab4c548738",
-        "0x01a8227d4e7c3068ad1000c97a059af5c5fa3476",
         "0xac4b3dacb91461209ae9d41ec517c2b9cb1b7daf",
         "0x9db9e0e53058c89e5b94e29621a205198648425b",
         "0xe42318ea3b998e8355a3da364eb9d48ec725eb45",
-        "0x1a098a748c8167f023e79986b095843ba0c8db03",
         "0x5764a6f2212d502bc5970f9f129ffcd61e5d7563",
         "0x4b5ab61593a2401b1075b90c04cbcdd3f87ce011",
         "0xe15e6583425700993bd08f51bf6e7b73cd5da91b",
@@ -117,9 +103,7 @@
         "0x6c4c7f46d9d4ef6bc5c9e155f011ad19fc4ef321",
         "0xcd423f3ab39a11ff1d9208b7d37df56e902c932b",
         "0x99132b53ab44694eeb372e87bced3929e4ab8456",
-        "0x69d91b94f0aaf8e8a2586909fa77a5c2c89818d5",
-        "0x86d257cdb7bc9c0df10e84c8709697f92770b335",
-        "0xf8dbd52488978a79dfe6ffbd81a01fc5948bf9ee"
+        "0x69d91b94f0aaf8e8a2586909fa77a5c2c89818d5"
       ],
       "preload_tasks": [
         "eth_price",

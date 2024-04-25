@@ -1,0 +1,10 @@
+{
+    "preloaders": [
+        {
+          "task_type": "block_details",
+          "module": "snapshotter.utils.preloaders.block_details.preloader",
+          "class_name": "BlockDetailsPreloader"
+        }
+    ],
+    "timeout": 60
+}

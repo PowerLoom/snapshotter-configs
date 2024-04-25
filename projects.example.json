@@ -1,0 +1,13 @@
+{
+    "config": [{
+        "project_type": "stakingYield_lido",
+        "preload_tasks": [
+            "block_details"
+        ],
+        "processor":{
+          "module": "snapshotter.modules.computes.lido_staking_yield",
+          "class_name": "LidoStakingYieldProcessor"
+        }
+      }
+    ]
+  }

@@ -1,4 +1,34 @@
 {
-    "config": [
+    "config": [{
+        "project_type": "aggregate_oracleContract_24h_average",
+        "aggregate_on": "SingleProject",
+        "filters": {
+          "projectId": "oracleContract_answers"
+        },
+        "processor": {
+          "module": "snapshotter.modules.computes.aggregate.single_chainlink_24h_avg",
+          "class_name": "AggregateSingleAnswerProcessor"
+        }
+      },
+      {
+        "project_type": "aggregate_all_oracles",
+        "aggregate_on": "MultiProject",
+        "projects_to_wait_for": [
+          "aggregate_oracleContract_24h_average:0xc929ad75b72593967de83e7f7cda0493458261d9:CHAINLINK",
+          "oracleContract_answers:0xc929ad75b72593967de83e7f7cda0493458261d9:CHAINLINK",
+          "aggregate_oracleContract_24h_average:0x547a514d5e3769680ce22b2361c10ea13619e8a9:CHAINLINK",
+          "oracleContract_answers:0x547a514d5e3769680ce22b2361c10ea13619e8a9:CHAINLINK",
+          "aggregate_oracleContract_24h_average:0x7eed379bf00005cfed29fed4009669de9bcc21ce:CHAINLINK",
+          "oracleContract_answers:0x7eed379bf00005cfed29fed4009669de9bcc21ce:CHAINLINK",
+          "aggregate_oracleContract_24h_average:0xff3eeb22b5e3de6e705b44749c2559d704923fd7:CHAINLINK",
+          "oracleContract_answers:0xff3eeb22b5e3de6e705b44749c2559d704923fd7:CHAINLINK",
+          "aggregate_oracleContract_24h_average:0x14e613ac84a31f709eadbdf89c6cc390fdc9540a:CHAINLINK",
+          "oracleContract_answers:0x14e613ac84a31f709eadbdf89c6cc390fdc9540a:CHAINLINK"
+        ],
+        "processor": {
+          "module": "snapshotter.modules.computes.aggregate.multi_chainlink_all_oracles",
+          "class_name": "AggregateAllOraclesProcessor"
+        }
+      }
     ]
 }

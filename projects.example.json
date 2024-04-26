@@ -1,4 +1,21 @@
 {
     "config": [
+      {
+        "project_type": "oracleContract_answers",
+        "preload_tasks":[
+          "block_details"
+        ],
+        "projects":[
+          "0xc929ad75b72593967de83e7f7cda0493458261d9",
+          "0x547a514d5e3769680ce22b2361c10ea13619e8a9",
+          "0x7eed379bf00005cfed29fed4009669de9bcc21ce",
+          "0xff3eeb22b5e3de6e705b44749c2559d704923fd7",
+          "0x14e613ac84a31f709eadbdf89c6cc390fdc9540a"
+        ],
+        "processor":{
+          "module": "snapshotter.modules.computes.oracle_answers",
+          "class_name": "OracleAnswerProcessor"
+        }
+      }
     ]
   }

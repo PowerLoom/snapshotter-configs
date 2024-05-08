@@ -64,7 +64,8 @@
         "poolContract_total_supply:0x3432b6a60d23ca0dfca7761b7ab56459d9c964d0:aavev3",
         "poolContract_total_supply:0xf939e0a03fb07f59a73314e73794be0e57ac1b4e:aavev3",
         "poolContract_total_supply:0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2:aavev3",
-        "poolContract_total_supply:0x6c3ea9036406852006290770bedfcaba0e23a0e8:aavev3"
+        "poolContract_total_supply:0x6c3ea9036406852006290770bedfcaba0e23a0e8:aavev3",
+        "poolContract_total_supply:0xcd5fe23c85820f7b72d0926fc9b05b43e359b7ee:aavev3"
       ],
       "processor": {
         "module": "snapshotter.modules.computes.aggregate.multi_aave_top_assets",
@@ -102,7 +103,8 @@
         "poolContract_total_supply:0x3432b6a60d23ca0dfca7761b7ab56459d9c964d0:aavev3",
         "poolContract_total_supply:0xf939e0a03fb07f59a73314e73794be0e57ac1b4e:aavev3",
         "poolContract_total_supply:0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2:aavev3",
-        "poolContract_total_supply:0x6c3ea9036406852006290770bedfcaba0e23a0e8:aavev3"
+        "poolContract_total_supply:0x6c3ea9036406852006290770bedfcaba0e23a0e8:aavev3",
+        "poolContract_total_supply:0xcd5fe23c85820f7b72d0926fc9b05b43e359b7ee:aavev3"
       ],
       "processor": {
         "module": "snapshotter.modules.computes.aggregate.multi_aave_stats",
@@ -140,7 +142,8 @@
         "aggregate_poolContract_volume_24h:0x3432b6a60d23ca0dfca7761b7ab56459d9c964d0:aavev3",
         "aggregate_poolContract_volume_24h:0xf939e0a03fb07f59a73314e73794be0e57ac1b4e:aavev3",
         "aggregate_poolContract_volume_24h:0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2:aavev3",
-        "aggregate_poolContract_volume_24h:0x6c3ea9036406852006290770bedfcaba0e23a0e8:aavev3"
+        "aggregate_poolContract_volume_24h:0x6c3ea9036406852006290770bedfcaba0e23a0e8:aavev3",
+        "aggregate_poolContract_volume_24h:0xcd5fe23c85820f7b72d0926fc9b05b43e359b7ee:aavev3"
       ],
       "processor": {
         "module": "snapshotter.modules.computes.aggregate.multi_aave_top_volume",

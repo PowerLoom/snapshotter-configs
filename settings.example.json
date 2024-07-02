@@ -7,6 +7,7 @@
   "instance_id": "account-address",
   "signer_private_key": "signer-account-private-key",
   "slot_id": "slot-id",
+  "data_market_id": "data-market-id",
   "rpc": {
     "full_nodes": [{
       "url": "https://rpc-url"
@@ -38,8 +39,13 @@
   "projects_config_path": "config/projects.json",
   "pair_contract_abi": "snapshotter/static/abis/UniswapV2Pool.json",
   "protocol_state": {
-    "abi": "snapshotter/static/abis/ProtocolContract.json",
+    "abi": "snapshotter/static/abis/ProtocolLogicContract.json",
     "address": "protocol-state-contract",
+    "deadline_buffer": 500
+  },
+  "data_market": {
+    "abi": "snapshotter/static/abis/DataMarketInterface.json",
+    "address": "",
     "deadline_buffer": 500
   },
   "relayer": {

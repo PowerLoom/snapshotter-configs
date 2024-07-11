@@ -140,5 +140,11 @@
       "max_keepalive_connections": 50,
       "keepalive_expiry": 300
     }
+  },
+  "httpx":{
+    "pool_timeout": 1,
+    "connect_timeout": 2,
+    "read_timeout": 60,
+    "write_timeout": 60
   }
 }

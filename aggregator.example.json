@@ -26,6 +26,8 @@
       "project_type": "aggregate_24h_top_pairs_lite",
       "aggregate_on": "MultiProject",
       "projects_to_wait_for": [
+        "aggregate_pairContract_24h_trade_volume:0xcdc516fa7df49204b6ae58eb5e60a7bcb704b04e:UNISWAPV3",
+        "pairContract_pair_total_reserves:0xcdc516fa7df49204b6ae58eb5e60a7bcb704b04e:UNISWAPV3",
         "aggregate_pairContract_24h_trade_volume:0xd0b53d9277642d899df5c87a3966a349a798f224:UNISWAPV3",
         "pairContract_pair_total_reserves:0xd0b53d9277642d899df5c87a3966a349a798f224:UNISWAPV3",
         "aggregate_pairContract_24h_trade_volume:0xc9034c3e7f58003e6ae0c8438e7c8f4598d5acaa:UNISWAPV3",
@@ -76,6 +78,8 @@
       "project_type": "aggregate_24h_top_tokens_lite",
       "aggregate_on": "MultiProject",
       "projects_to_wait_for": [
+        "aggregate_pairContract_24h_trade_volume:0xcdc516fa7df49204b6ae58eb5e60a7bcb704b04e:UNISWAPV3",
+        "pairContract_pair_total_reserves:0xcdc516fa7df49204b6ae58eb5e60a7bcb704b04e:UNISWAPV3",
         "aggregate_pairContract_24h_trade_volume:0xd0b53d9277642d899df5c87a3966a349a798f224:UNISWAPV3",
         "pairContract_pair_total_reserves:0xd0b53d9277642d899df5c87a3966a349a798f224:UNISWAPV3",
         "aggregate_pairContract_24h_trade_volume:0xc9034c3e7f58003e6ae0c8438e7c8f4598d5acaa:UNISWAPV3",
@@ -126,6 +130,7 @@
       "project_type": "aggregate_7d_top_pairs_lite",
       "aggregate_on": "MultiProject",
       "projects_to_wait_for": [
+        "aggregate_pairContract_7d_trade_volume:0xcdc516fa7df49204b6ae58eb5e60a7bcb704b04e:UNISWAPV3",
         "aggregate_pairContract_7d_trade_volume:0xd0b53d9277642d899df5c87a3966a349a798f224:UNISWAPV3",
         "aggregate_pairContract_7d_trade_volume:0xc9034c3e7f58003e6ae0c8438e7c8f4598d5acaa:UNISWAPV3",
         "aggregate_pairContract_7d_trade_volume:0xba3f945812a83471d709bce9c3ca699a19fb46f7:UNISWAPV3",
@@ -156,6 +161,8 @@
       "project_type": "aggregate_24h_stats_lite",
       "aggregate_on": "MultiProject",
       "projects_to_wait_for": [
+        "aggregate_pairContract_24h_trade_volume:0xcdc516fa7df49204b6ae58eb5e60a7bcb704b04e:UNISWAPV3",
+        "pairContract_pair_total_reserves:0xcdc516fa7df49204b6ae58eb5e60a7bcb704b04e:UNISWAPV3",
         "aggregate_pairContract_24h_trade_volume:0xd0b53d9277642d899df5c87a3966a349a798f224:UNISWAPV3",
         "pairContract_pair_total_reserves:0xd0b53d9277642d899df5c87a3966a349a798f224:UNISWAPV3",
         "aggregate_pairContract_24h_trade_volume:0xc9034c3e7f58003e6ae0c8438e7c8f4598d5acaa:UNISWAPV3",

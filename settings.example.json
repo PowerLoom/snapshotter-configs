@@ -6,6 +6,7 @@
   },
   "instance_id": "account-address",
   "signer_private_key": "signer-account-private-key",
+  "local_collector_port": "local-collector-port",
   "slot_id": "slot-id",
   "rpc": {
     "full_nodes": [{

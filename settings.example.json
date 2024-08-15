@@ -4,6 +4,7 @@
     "host": "0.0.0.0",
     "port": 8002
   },
+  "data_market": "data-market-contract",
   "instance_id": "account-address",
   "signer_private_key": "signer-account-private-key",
   "local_collector_port": "local-collector-port",

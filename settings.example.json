@@ -59,7 +59,10 @@
   },
   "reporting": {
     "slack_url": "https://slack-reporting-url",
-    "service_url": "https://powerloom-reporting-url"
+    "service_url": "https://powerloom-reporting-url",
+    "telegram_url": "https://telegram-reporting-url",
+    "telegram_chat_id": "telegram-chat-id",
+    "failure_report_frequency": 5
   },
   "redis": {
     "host": "redis",

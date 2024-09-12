@@ -12,6 +12,8 @@
   },
   "instance_id": "account-address",
   "data_market": "data-market-contract",
+  "slot_id": "slot-id",
+  "local_collector_port": "local-collector-port",
   "rpc": {
     "full_nodes": [{
       "url": "https://rpc-url"

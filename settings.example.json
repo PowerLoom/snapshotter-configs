@@ -32,15 +32,6 @@
   "rlimit": {
     "file_descriptors": 40960
   },
-  "snapshot_submissions": {
-    "enabled": true,
-    "signers": [
-      {
-        "address": "signer-address",
-        "private_key": "signer-private-key"
-      }
-    ]
-  },
   "rabbitmq": {
     "user": "guest",
     "password": "guest",
@@ -93,7 +84,8 @@
   "protocol_state": {
     "abi": "snapshotter/static/abis/ProtocolContract.json",
     "address": "protocol-state-contract",
-    "deadline_buffer": 1000
+    "deadline_buffer": 1000,
+    "day_counter_buffer": 0
   },
   "callback_worker_config": {
     "num_delegate_workers": 0,

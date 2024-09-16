@@ -65,16 +65,16 @@
     "failure_report_frequency": 5
   },
   "redis": {
-    "host": "redis",
-    "port": 6379,
+    "host": "redis-host",
+    "port": redis-port,
     "db": 0,
     "password": null,
     "ssl": false,
     "cluster_mode": false
   },
   "redis_reader": {
-    "host": "redis",
-    "port": 6379,
+    "host": "redis-host",
+    "port": redis-port,
     "db": 0,
     "password": null
   },

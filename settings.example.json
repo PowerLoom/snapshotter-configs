@@ -68,7 +68,7 @@
     "host": "redis-host",
     "port": redis-port,
     "db": 0,
-    "password": null,
+    "password": redis-password,
     "ssl": false,
     "cluster_mode": false
   },
@@ -76,7 +76,7 @@
     "host": "redis-host",
     "port": redis-port,
     "db": 0,
-    "password": null
+    "password": redis-password
   },
   "logs": {
     "trace_enabled": false,

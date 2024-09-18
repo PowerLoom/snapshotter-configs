@@ -66,6 +66,7 @@
   },
   "redis": {
     "host": "redis-host",
+    "user": "redis-user",
     "port": redis-port,
     "db": 0,
     "password": redis-password,
@@ -74,6 +75,7 @@
   },
   "redis_reader": {
     "host": "redis-host",
+    "user": "redis-user",
     "port": redis-port,
     "db": 0,
     "password": redis-password

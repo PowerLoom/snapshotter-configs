@@ -3,7 +3,8 @@
       "host": "redis-host",
       "port": redis-port,
       "db": 0,
-      "password": redis-password
+      "password": redis-password,
+      "ssl": redis-ssl
     },
   "bind": {
     "host": "0.0.0.0",

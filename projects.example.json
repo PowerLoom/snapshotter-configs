@@ -188,7 +188,7 @@
         "0x78612ae1f88bdf52fd8fe4c1844820716bf82d91"
       ],
       "processor": {
-        "module": "snapshotter.modules.computes.pair_total_reserves",
+        "module": "computes.pair_total_reserves",
         "class_name": "PairTotalReservesProcessor"
       }
     },
@@ -380,7 +380,7 @@
         "0x78612ae1f88bdf52fd8fe4c1844820716bf82d91"
       ],
       "processor": {
-        "module": "snapshotter.modules.computes.trade_volume",
+        "module": "computes.trade_volume",
         "class_name": "TradeVolumeProcessor"
       }
     }

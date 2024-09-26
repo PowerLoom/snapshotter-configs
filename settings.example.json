@@ -93,8 +93,8 @@
   },
   "callback_worker_config": {
     "num_delegate_workers": 0,
-    "num_snapshot_workers": 8,
-    "num_aggregation_workers": 12
+    "num_snapshot_workers": 4,
+    "num_aggregation_workers": 6
   },
   "ipfs": {
     "url": "ipfs-writer-url",
@@ -111,12 +111,11 @@
       "req_per_sec": 10,
       "burst": 10
     },
-    "timeout": 60,
-    "local_cache_path": "/home/ubuntu/local_cache/",
+    "timeout": 90,
     "connection_limits":{
-      "max_connections": 100,
-      "max_keepalive_connections": 50,
-      "keepalive_expiry": 300
+      "max_connections": 10,
+      "max_keepalive_connections": 5,
+      "keepalive_expiry": 60
     },
     "remote_pinning": {
       "enabled": false,
@@ -149,8 +148,8 @@
     }
   },
   "httpx":{
-    "pool_timeout": 1,
-    "connect_timeout": 2,
+    "pool_timeout": 10,
+    "connect_timeout": 10,
     "read_timeout": 60,
     "write_timeout": 60
   },

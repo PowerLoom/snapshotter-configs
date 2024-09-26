@@ -111,11 +111,11 @@
       "req_per_sec": 10,
       "burst": 10
     },
-    "timeout": 90,
+    "timeout": 60,
     "connection_limits":{
-      "max_connections": 10,
-      "max_keepalive_connections": 5,
-      "keepalive_expiry": 60
+      "max_connections": 100,
+      "max_keepalive_connections": 50,
+      "keepalive_expiry": 300
     },
     "remote_pinning": {
       "enabled": false,

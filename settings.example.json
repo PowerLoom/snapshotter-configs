@@ -67,7 +67,7 @@
   "redis": {
     "host": "redis-host",
     "port": redis-port,
-    "db": 0,
+    "db": redis-db,
     "password": redis-password,
     "ssl": redis-ssl,
     "cluster_mode": false
@@ -75,7 +75,7 @@
   "redis_reader": {
     "host": "redis-host",
     "port": redis-port,
-    "db": 0,
+    "db": redis-db,
     "password": redis-password,
     "ssl": redis-ssl  
   },

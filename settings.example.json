@@ -13,6 +13,10 @@
   "instance_id": "account-address",
   "data_market": "data-market-contract",
   "slot_id": "slot-id",
+  "async_task_config": {
+    "task_timeout": 300,
+    "task_cleanup_interval": 60
+  },
   "local_collector_port": "local-collector-port",
   "rpc": {
     "full_nodes": [{

@@ -33,6 +33,11 @@
       "max_connections": 100,
       "max_keepalive_connections": 50,
       "keepalive_expiry": 300
+    },
+    "rate_limit": {
+      "requests_per_second": 10,
+      "requests_per_minute": 600,
+      "requests_per_day": 864000
     }
   },
   "rlimit": {

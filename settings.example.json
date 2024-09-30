@@ -70,17 +70,17 @@
   },
   "redis": {
     "host": "redis-host",
-    "port": redis-port,
+    "port": "redis-port",
     "db": 0,
-    "password": redis-password,
+    "password": "redis-password",
     "ssl": false,
     "cluster_mode": false
   },
   "redis_reader": {
     "host": "redis-host",
-    "port": redis-port,
+    "port": "redis-port",
     "db": 0,
-    "password": redis-password
+    "password": "redis-password"
   },
   "logs": {
     "trace_enabled": false,

@@ -22,7 +22,7 @@
     "full_nodes": [{
       "url": "https://rpc-url",
       "rate_limit": {
-        "requests_per_second": 10
+        "requests_per_second": "source-rpc-rate-limit"
       }
     }],
     "archive_nodes": [],
@@ -146,7 +146,7 @@
     "full_nodes": [{
       "url": "https://prost-rpc-url",
       "rate_limit": {
-        "requests_per_second": 10
+        "requests_per_second": "prost-rpc-rate-limit"
       }
     }],
     "retry": 5,

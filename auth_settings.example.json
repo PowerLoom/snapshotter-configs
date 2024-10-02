@@ -1,9 +1,9 @@
 {
   "redis": {
       "host": "redis-host",
-      "port": redis-port,
+      "port": "redis-port",
       "db": 0,
-      "password": redis-password
+      "password": "redis-password"
     },
   "bind": {
     "host": "0.0.0.0",

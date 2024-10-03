@@ -20,7 +20,10 @@
   "local_collector_port": "local-collector-port",
   "rpc": {
     "full_nodes": [{
-      "url": "https://rpc-url"
+      "url": "https://rpc-url",
+      "rate_limit": {
+        "requests_per_second": "source-rpc-rate-limit"
+      }
     }],
     "archive_nodes": [],
     "force_archive_blocks": 100,
@@ -141,7 +144,10 @@
   },
   "anchor_chain_rpc": {
     "full_nodes": [{
-      "url": "https://prost-rpc-url"
+      "url": "https://prost-rpc-url",
+      "rate_limit": {
+        "requests_per_second": "prost-rpc-rate-limit"
+      }
     }],
     "retry": 5,
     "request_time_out": 5,

@@ -31,7 +31,7 @@
     "request_time_out": 5,
     "skip_epoch_threshold_blocks": 30,
     "polling_interval": 3,
-    "semaphore_value": 20,
+    "semaphore_value": 50,
     "connection_limits":{
       "max_connections": 100,
       "max_keepalive_connections": 50,

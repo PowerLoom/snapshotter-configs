@@ -86,7 +86,7 @@
     "password": "redis-password"
   },
   "logs": {
-    "trace_enabled": false,
+    "debug_mode": false,
     "write_to_files": true
   },
   "projects_config_path": "config/projects.json",

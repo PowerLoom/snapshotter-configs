@@ -27,7 +27,7 @@
       ],
       "processor": {
         "module": "computes.aggregate.multi_uniswap_top_pairs_24h",
-        "class_name": "AggreagateTopPairsProcessor"
+        "class_name": "AggregateTopPairsProcessor"
       }
     },
     {
@@ -39,7 +39,7 @@
       ],
       "processor": {
         "module": "computes.aggregate.multi_uniswap_top_tokens",
-        "class_name": "AggreagateTopTokensProcessor"
+        "class_name": "AggregateTopTokensProcessor"
       }
     },
     {
@@ -50,7 +50,7 @@
       ],
       "processor": {
         "module": "computes.aggregate.multi_uniswap_top_pairs_7d",
-        "class_name": "AggreagateTopPairsProcessor"
+        "class_name": "AggregateTopPairsProcessor"
       }
     },
     {
@@ -62,7 +62,7 @@
       ],
       "processor": {
         "module": "computes.aggregate.multi_uniswap_stats",
-        "class_name": "AggreagateStatsProcessor"
+        "class_name": "AggregateStatsProcessor"
       }
     }
   ]

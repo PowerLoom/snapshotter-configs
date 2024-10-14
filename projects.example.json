@@ -34,7 +34,7 @@
         "0xcd5fe23c85820f7b72d0926fc9b05b43e359b7ee"
         ],
       "processor":{
-        "module": "snapshotter.modules.computes.pool_total_supply",
+        "module": "computes.pool_total_supply",
         "class_name": "AssetTotalSupplyProcessor"
       },
       "preload_tasks":[
@@ -76,7 +76,7 @@
         "0xcd5fe23c85820f7b72d0926fc9b05b43e359b7ee"
         ],
       "processor":{
-        "module": "snapshotter.modules.computes.pool_supply_volume",
+        "module": "computes.pool_supply_volume",
         "class_name": "AssetSupplyVolumeProcessor"
       },
       "preload_tasks":[

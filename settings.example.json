@@ -11,9 +11,19 @@
     "public_rate_limit": "20000/day;300/minute;10/second"
   },
   "instance_id": "account-address",
+  "data_market": "data-market-contract",
+  "slot_id": "slot-id",
+  "async_task_config": {
+    "task_timeout": 300,
+    "task_cleanup_interval": 60
+  },
+  "local_collector_port": "local-collector-port",
   "rpc": {
     "full_nodes": [{
-      "url": "https://rpc-url"
+      "url": "https://rpc-url",
+      "rate_limit": {
+        "requests_per_second": "source-rpc-rate-limit"
+      }
     }],
     "archive_nodes": [],
     "force_archive_blocks": 100,
@@ -21,7 +31,7 @@
     "request_time_out": 5,
     "skip_epoch_threshold_blocks": 30,
     "polling_interval": 3,
-    "semaphore_value": 20,
+    "semaphore_value": 50,
     "connection_limits":{
       "max_connections": 100,
       "max_keepalive_connections": 50,
@@ -30,15 +40,6 @@
   },
   "rlimit": {
     "file_descriptors": 40960
-  },
-  "snapshot_submissions": {
-    "enabled": true,
-    "signers": [
-      {
-        "address": "signer-address",
-        "private_key": "signer-private-key"
-      }
-    ]
   },
   "rabbitmq": {
     "user": "guest",
@@ -65,39 +66,42 @@
   },
   "reporting": {
     "slack_url": "https://slack-reporting-url",
-    "service_url": "https://powerloom-reporting-url"
+    "service_url": "https://powerloom-reporting-url",
+    "telegram_url": "https://telegram-reporting-url",
+    "telegram_chat_id": "telegram-chat-id",
+    "min_reporting_interval": 120
   },
   "redis": {
-    "host": "redis",
-    "port": 6379,
+    "host": "redis-host",
+    "port": "redis-port",
     "db": 0,
-    "password": null,
+    "password": "redis-password",
     "ssl": false,
     "cluster_mode": false
   },
   "redis_reader": {
-    "host": "redis",
-    "port": 6379,
+    "host": "redis-host",
+    "port": "redis-port",
     "db": 0,
-    "password": null
+    "password": "redis-password"
   },
   "logs": {
-    "trace_enabled": false,
+    "debug_mode": false,
     "write_to_files": true
   },
   "projects_config_path": "config/projects.json",
   "aggregator_config_path": "config/aggregator.json",
   "preloader_config_path": "config/preloader.json",
-  "pair_contract_abi": "snapshotter/static/abis/UniswapV2Pair.json",
   "protocol_state": {
     "abi": "snapshotter/static/abis/ProtocolContract.json",
     "address": "protocol-state-contract",
-    "deadline_buffer": 1000
+    "deadline_buffer": 1000,
+    "day_counter_buffer": 0
   },
   "callback_worker_config": {
     "num_delegate_workers": 0,
-    "num_snapshot_workers": 8,
-    "num_aggregation_workers": 12
+    "num_snapshot_workers": 4,
+    "num_aggregation_workers": 6
   },
   "ipfs": {
     "url": "ipfs-writer-url",
@@ -115,7 +119,6 @@
       "burst": 10
     },
     "timeout": 60,
-    "local_cache_path": "/home/ubuntu/local_cache/",
     "connection_limits":{
       "max_connections": 100,
       "max_keepalive_connections": 50,
@@ -141,7 +144,10 @@
   },
   "anchor_chain_rpc": {
     "full_nodes": [{
-      "url": "https://prost-rpc-url"
+      "url": "https://prost-rpc-url",
+      "rate_limit": {
+        "requests_per_second": "prost-rpc-rate-limit"
+      }
     }],
     "retry": 5,
     "request_time_out": 5,
@@ -152,9 +158,10 @@
     }
   },
   "httpx":{
-    "pool_timeout": 1,
-    "connect_timeout": 2,
+    "pool_timeout": 10,
+    "connect_timeout": 10,
     "read_timeout": 60,
     "write_timeout": 60
-  }
+  },
+  "node_version": "v1.2"
 }

@@ -69,7 +69,7 @@
     "service_url": "https://powerloom-reporting-url",
     "telegram_url": "https://telegram-reporting-url",
     "telegram_chat_id": "telegram-chat-id",
-    "min_reporting_interval": 120
+    "failure_report_frequency": 5
   },
   "redis": {
     "host": "redis-host",

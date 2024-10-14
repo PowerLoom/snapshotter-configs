@@ -7,18 +7,23 @@
         },
         {
           "task_type": "bulk_price",
-          "module": "snapshotter.modules.computes.utils.preloaders.pricing.preloader",
+          "module": "computes.preloaders.pricing.preloader",
           "class_name": "BulkPricePreloader"
         },
         {
           "task_type": "bulk_asset",
-          "module": "snapshotter.modules.computes.utils.preloaders.asset_data.preloader",
+          "module": "computes.preloaders.asset_data.preloader",
           "class_name": "BulkAssetDataPreloader"
         },
         {
           "task_type": "bulk_event",
-          "module": "snapshotter.modules.computes.utils.preloaders.volume_events.preloader",
+          "module": "computes.preloaders.volume_events.preloader",
           "class_name": "AaveBulkVolumeEventsPreloader"
+        },
+        {
+          "task_type": "eth_price",
+          "module": "computes.preloaders.eth_price.preloader",
+          "class_name": "EthPricePreloader"
         }
     ],
     "delegate_tasks": [

@@ -1,0 +1,12 @@
+{
+    "preloaders": [
+        {
+          "task_type": "eth_price",
+          "module": "computes.preloaders.eth_price.preloader",
+          "class_name": "EthPricePreloader"
+        }
+    ],
+    "delegate_tasks": [
+    ],
+    "timeout": 60
+}

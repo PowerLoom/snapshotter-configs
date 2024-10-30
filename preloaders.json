@@ -1,10 +1,20 @@
 {
     "preloaders": [
-        {
-          "task_type": "eth_price",
-          "module": "computes.preloaders.eth_price.preloader",
-          "class_name": "EthPricePreloader"
-        }
+      {
+        "task_type": "bulk_asset",
+        "module": "computes.preloaders.asset_data.preloader",
+        "class_name": "BulkAssetDataPreloader"
+      },
+      {
+        "task_type": "bulk_event",
+        "module": "computes.preloaders.volume_events.preloader",
+        "class_name": "AaveBulkVolumeEventsPreloader"
+      },
+      {
+        "task_type": "block_details",
+        "module": "snapshotter.utils.preloaders.block_details.preloader",
+        "class_name": "BlockDetailsPreloader"
+      }
     ],
     "delegate_tasks": [
     ],

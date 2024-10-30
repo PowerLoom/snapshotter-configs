@@ -1,19 +1,26 @@
 {
   "config": [{
-      "project_type": "pairContract_pair_total_reserves",
+      "project_type": "poolContract_total_supply",
       "processor":{
-        "module": "computes.pair_total_reserves",
-        "class_name": "PairTotalReservesProcessor"
+        "module": "computes.pool_total_supply",
+        "class_name": "AssetTotalSupplyProcessor"
       },
-      "preload_tasks": ["eth_price"]
+      "preload_tasks": [
+        "bulk_asset",
+        "block_details"
+      ]
     },
     {
-      "project_type": "pairContract_trade_volume",
+      "project_type": "poolContract_supply_volume",
         "processor":{
-          "module": "computes.trade_volume",
-          "class_name": "TradeVolumeProcessor"
+          "module": "computes.pool_supply_volume",
+          "class_name": "AssetSupplyVolumeProcessor"
         },
-      "preload_tasks": ["eth_price"]
+      "preload_tasks": [
+        "bulk_asset",
+        "bulk_event",
+        "block_details"
+      ]
     }
   ]
 }

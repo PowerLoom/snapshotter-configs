@@ -69,7 +69,8 @@
     "service_url": "https://powerloom-reporting-url",
     "telegram_url": "https://telegram-reporting-url",
     "telegram_chat_id": "telegram-chat-id",
-    "min_reporting_interval": 120
+    "min_reporting_interval": 100,
+    "failure_report_frequency": 5
   },
   "redis": {
     "host": "redis-host",
@@ -100,8 +101,8 @@
   },
   "callback_worker_config": {
     "num_delegate_workers": 0,
-    "num_snapshot_workers": 4,
-    "num_aggregation_workers": 6
+    "num_snapshot_workers": 2,
+    "num_aggregation_workers": 2
   },
   "ipfs": {
     "url": "ipfs-writer-url",
@@ -163,5 +164,6 @@
     "read_timeout": 60,
     "write_timeout": 60
   },
-  "node_version": "v1.2"
+  "node_version": "v1.2",
+  "operation_mode": "AggregateNode"
 }

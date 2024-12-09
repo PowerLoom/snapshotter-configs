@@ -132,15 +132,12 @@
       "background_pinning": false
     }
   },
-  "web3storage":{
-    "upload_snapshots": false,
-    "upload_aggregates": true,
-    "url": "https://api.web3.storage",
-    "upload_url_suffix": "/upload",
-    "api_token": "web3-storage-token",
-    "timeout": 30,
-    "max_idle_conns": 5,
-    "idle_conn_timeout": 300
+  "ipfs_s3_config": {
+    "enabled": "ipfs-s3-config-enabled",
+    "endpoint_url": "ipfs-s3-endpoint-url",
+    "bucket_name": "ipfs-s3-bucket-name",
+    "access_key": "ipfs-s3-access-key",
+    "secret_key": "ipfs-s3-secret-key"
   },
   "anchor_chain_rpc": {
     "full_nodes": [{

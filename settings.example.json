@@ -39,7 +39,7 @@
     }
   },
   "rlimit": {
-    "file_descriptors": 40960
+    "file_descriptors": 2960000
   },
   "rabbitmq": {
     "user": "guest",

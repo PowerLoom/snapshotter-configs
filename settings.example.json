@@ -82,7 +82,7 @@
   "redis_reader": {
     "host": "redis-host",
     "port": "redis-port",
-    "db": 0,
+    "db": "redis-db",
     "password": "redis-password"
   },
   "logs": {

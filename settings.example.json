@@ -76,14 +76,15 @@
     "port": "redis-port",
     "db": "redis-db",
     "password": "redis-password",
-    "ssl": false,
+    "ssl": "redis-ssl",
     "cluster_mode": false
   },
   "redis_reader": {
     "host": "redis-host",
     "port": "redis-port",
     "db": "redis-db",
-    "password": "redis-password"
+    "password": "redis-password",
+    "ssl": "redis-ssl"
   },
   "logs": {
     "debug_mode": false,

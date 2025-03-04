@@ -34,7 +34,8 @@
     "service_url": "https://powerloom-reporting-url",
     "telegram_url": "https://telegram-reporting-url",
     "telegram_chat_id": "telegram-chat-id",
-    "failure_report_frequency": 5
+    "failure_report_frequency": 5,
+    "notification_cooldown": "telegram-notification-cooldown"
   },
   "logs": {
     "trace_enabled": false,

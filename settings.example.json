@@ -10,22 +10,6 @@
   "signer_private_key": "signer-account-private-key",
   "local_collector_port": "local-collector-port",
   "slot_id": "slot-id",
-  "old_rpc": {
-    "full_nodes": [{
-      "url": "https://old-rpc-url"
-    }],
-    "archive_nodes": [],
-    "force_archive_blocks": 100,
-    "retry": 5,
-    "request_time_out": 5,
-    "skip_epoch_threshold_blocks": 30,
-    "polling_interval": 3,
-    "connection_limits":{
-      "max_connections": 100,
-      "max_keepalive_connections": 50,
-      "keepalive_expiry": 300
-    }
-  },
   "rpc": {
     "full_nodes": [{
       "url": "https://rpc-url"

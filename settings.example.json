@@ -5,7 +5,7 @@
     "port": 8002
   },
   "data_market": "data-market-contract",
-  "old_data_market": "old-data-market-contract",
+  "old_data_market": "old-datamarket-contract",
   "instance_id": "account-address",
   "signer_private_key": "signer-account-private-key",
   "local_collector_port": "local-collector-port",

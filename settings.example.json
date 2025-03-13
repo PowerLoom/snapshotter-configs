@@ -5,7 +5,7 @@
     "port": 8002
   },
   "data_market": "data-market-contract",
-  "old_data_market": "old-data-market-contract",
+  "old_data_market": "old-data-market",
   "instance_id": "account-address",
   "signer_private_key": "signer-account-private-key",
   "local_collector_port": "local-collector-port",
@@ -66,7 +66,7 @@
   },
   "protocol_state_old": {
     "abi": "snapshotter/static/abis/ProtocolContract.json",
-    "address": "protocol-state-contract-old",
+    "address": "old-protocol-state",
     "deadline_buffer": 500
   },
   "relayer": {

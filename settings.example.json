@@ -120,6 +120,6 @@
       "keepalive_expiry": 300
     }
   },
-  "node_version": "v1.5",
+  "node_version": "v2.7.0",
   "switch_rpc_at_epoch_id": 55001
 }

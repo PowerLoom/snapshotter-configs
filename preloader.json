@@ -11,7 +11,5 @@
           "class_name": "EthPricePreloader"
         }
     ],
-    "delegate_tasks": [
-    ],
     "timeout": 60
 }

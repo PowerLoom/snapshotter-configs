@@ -41,29 +41,6 @@
   "rlimit": {
     "file_descriptors": 40960
   },
-  "rabbitmq": {
-    "user": "guest",
-    "password": "guest",
-    "host": "rabbitmq",
-    "port": 5672,
-    "setup": {
-      "core": {
-        "exchange": "powerloom-backend"
-      },
-      "callbacks": {
-        "exchange": "powerloom-backend-callbacks"
-      },
-      "commit_payload": {
-        "exchange": "powerloom-backend-commit-payload"
-      },
-      "event_detector": {
-        "exchange": "powerloom-backend-event-detector"
-      },
-      "delegated_worker": {
-        "exchange": "powerloom-backend-delegated-worker"
-      }
-    }
-  },
   "reporting": {
     "slack_url": "https://slack-reporting-url",
     "service_url": "https://powerloom-reporting-url",
@@ -99,7 +76,6 @@
     "day_counter_buffer": 0
   },
   "callback_worker_config": {
-    "num_delegate_workers": 0,
     "num_snapshot_workers": 4,
     "num_aggregation_workers": 6
   },

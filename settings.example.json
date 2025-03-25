@@ -121,5 +121,5 @@
     }
   },
   "node_version": "v2.7.0",
-  "switch_rpc_at_epoch_id": 55001
+  "switch_rpc_at_epoch_id": 54000
 }

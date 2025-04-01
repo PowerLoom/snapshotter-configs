@@ -20,10 +20,7 @@
   "local_collector_port": "local-collector-port",
   "rpc": {
     "full_nodes": [{
-      "url": "https://rpc-url",
-      "rate_limit": {
-        "requests_per_second": "source-rpc-rate-limit"
-      }
+      "url": "https://rpc-url"
     }],
     "archive_nodes": [],
     "force_archive_blocks": 100,
@@ -106,21 +103,19 @@
       "service_endpoint": "",
       "service_token": "",
       "background_pinning": false
+    },
+    "s3": {
+      "enabled": "ipfs-s3-config-enabled",
+      "endpoint_url": "ipfs-s3-endpoint-url",
+      "bucket_name": "ipfs-s3-bucket-name",
+      "access_key": "ipfs-s3-access-key",
+      "secret_key": "ipfs-s3-secret-key"
     }
-  },
-  "ipfs_s3_config": {
-    "enabled": "ipfs-s3-config-enabled",
-    "endpoint_url": "ipfs-s3-endpoint-url",
-    "bucket_name": "ipfs-s3-bucket-name",
-    "access_key": "ipfs-s3-access-key",
-    "secret_key": "ipfs-s3-secret-key"
+  
   },
   "anchor_chain_rpc": {
     "full_nodes": [{
-      "url": "https://prost-rpc-url",
-      "rate_limit": {
-        "requests_per_second": "prost-rpc-rate-limit"
-      }
+      "url": "https://prost-rpc-url"
     }],
     "retry": 5,
     "request_time_out": 5,

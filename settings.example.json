@@ -5,7 +5,6 @@
     "port": 8002
   },
   "data_market": "data-market-contract",
-  "old_data_market": "old-datamarket-contract",
   "instance_id": "account-address",
   "signer_private_key": "signer-account-private-key",
   "local_collector_port": "local-collector-port",
@@ -26,7 +25,6 @@
       "keepalive_expiry": 300
     }
   },
-  "simulation_submission_url": "https://snapshotter-api.powerloom.io",
   "rlimit": {
     "file_descriptors": 2048
   },
@@ -35,7 +33,8 @@
     "service_url": "https://powerloom-reporting-url",
     "telegram_url": "https://telegram-reporting-url",
     "telegram_chat_id": "telegram-chat-id",
-    "failure_report_frequency": 5
+    "failure_report_frequency": 5,
+    "notification_cooldown": "telegram-notification-cooldown"
   },
   "logs": {
     "trace_enabled": false,
@@ -47,15 +46,6 @@
     "abi": "snapshotter/static/abis/ProtocolContract.json",
     "address": "protocol-state-contract",
     "deadline_buffer": 500
-  },
-  "protocol_state_old": {
-    "abi": "snapshotter/static/abis/ProtocolContract.json",
-    "address": "old-protocol-state",
-    "deadline_buffer": 500
-  },
-  "relayer": {
-    "host": "https://relayer-url",
-    "endpoint": "/submitSnapshot"
   },
   "ipfs": {
     "url": "ipfs-writer-url",
@@ -87,27 +77,6 @@
       "background_pinning": false
     }
   },
-  "web3storage":{
-    "upload_snapshots": false,
-    "url": "https://api.web3.storage",
-    "upload_url_suffix": "/upload",
-    "api_token": "web3-storage-token",
-    "timeout": 30,
-    "max_idle_conns": 5,
-    "idle_conn_timeout": 300
-  },
-  "prost_chain_rpc": {
-    "full_nodes": [{
-      "url": "https://prost-rpc-url"
-    }],
-    "retry": 5,
-    "request_time_out": 5,
-    "connection_limits":{
-      "max_connections": 100,
-      "max_keepalive_connections": 50,
-      "keepalive_expiry": 300
-    }
-  },
   "powerloom_chain_rpc": {
     "full_nodes": [{
       "url": "https://powerloom-rpc-url"
@@ -120,6 +89,5 @@
       "keepalive_expiry": 300
     }
   },
-  "node_version": "v2.7.0",
-  "switch_rpc_at_epoch_id": 55001
+  "node_version": "v2.8.0"
 }

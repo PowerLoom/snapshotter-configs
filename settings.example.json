@@ -13,6 +13,7 @@
   "instance_id": "account-address",
   "data_market": "data-market-contract",
   "slot_id": "slot-id",
+  "health_report_interval": 60,
   "async_task_config": {
     "task_timeout": 300,
     "task_cleanup_interval": 60
@@ -39,8 +40,6 @@
     "file_descriptors": 40960
   },
   "reporting": {
-    "slack_url": "https://slack-reporting-url",
-    "service_url": "https://powerloom-reporting-url",
     "telegram_url": "https://telegram-reporting-url",
     "telegram_chat_id": "telegram-chat-id",
     "min_reporting_interval": 120

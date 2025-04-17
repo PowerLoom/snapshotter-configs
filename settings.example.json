@@ -109,8 +109,11 @@
       "bucket_name": "ipfs-s3-bucket-name",
       "access_key": "ipfs-s3-access-key",
       "secret_key": "ipfs-s3-secret-key"
+    },
+    "unpinning": {
+      "enabled": "ipfs-unpinning-enabled",
+      "unpin_after": "ipfs-unpin-after"
     }
-  
   },
   "anchor_chain_rpc": {
     "full_nodes": [{

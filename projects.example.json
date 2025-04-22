@@ -3,8 +3,7 @@
     {
       "project_type": "pairContract_pair_total_reserves",
       "preload_tasks": [
-        "eth_price",
-        "block_details"
+        "eth_price"
       ],
       "projects": [
         "0x21b8065d10f73ee2e260e5b47d3344d3ced7596e",
@@ -195,8 +194,7 @@
     {
       "project_type": "pairContract_trade_volume",
       "preload_tasks": [
-        "eth_price",
-        "block_details"
+        "eth_price"
       ],
       "projects": [
         "0x21b8065d10f73ee2e260e5b47d3344d3ced7596e",

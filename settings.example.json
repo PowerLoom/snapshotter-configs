@@ -20,10 +20,7 @@
   "local_collector_port": "local-collector-port",
   "rpc": {
     "full_nodes": [{
-      "url": "https://rpc-url",
-      "rate_limit": {
-        "requests_per_second": "source-rpc-rate-limit"
-      }
+      "url": "https://rpc-url"
     }],
     "archive_nodes": [],
     "force_archive_blocks": 100,
@@ -41,36 +38,10 @@
   "rlimit": {
     "file_descriptors": 40960
   },
-  "rabbitmq": {
-    "user": "guest",
-    "password": "guest",
-    "host": "rabbitmq",
-    "port": 5672,
-    "setup": {
-      "core": {
-        "exchange": "powerloom-backend"
-      },
-      "callbacks": {
-        "exchange": "powerloom-backend-callbacks"
-      },
-      "commit_payload": {
-        "exchange": "powerloom-backend-commit-payload"
-      },
-      "event_detector": {
-        "exchange": "powerloom-backend-event-detector"
-      },
-      "delegated_worker": {
-        "exchange": "powerloom-backend-delegated-worker"
-      }
-    }
-  },
   "reporting": {
-    "slack_url": "https://slack-reporting-url",
-    "service_url": "https://powerloom-reporting-url",
     "telegram_url": "https://telegram-reporting-url",
     "telegram_chat_id": "telegram-chat-id",
-    "min_reporting_interval": 100,
-    "failure_report_frequency": 5
+    "min_reporting_interval": 100
   },
   "redis": {
     "host": "redis-host",
@@ -100,7 +71,6 @@
     "day_counter_buffer": 0
   },
   "callback_worker_config": {
-    "num_delegate_workers": 0,
     "num_snapshot_workers": 4,
     "num_aggregation_workers": 6
   },
@@ -131,21 +101,22 @@
       "service_endpoint": "",
       "service_token": "",
       "background_pinning": false
+    },
+    "s3": {
+      "enabled": "ipfs-s3-config-enabled",
+      "endpoint_url": "ipfs-s3-endpoint-url",
+      "bucket_name": "ipfs-s3-bucket-name",
+      "access_key": "ipfs-s3-access-key",
+      "secret_key": "ipfs-s3-secret-key"
     }
   },
-  "ipfs_s3_config": {
-    "enabled": "ipfs-s3-config-enabled",
-    "endpoint_url": "ipfs-s3-endpoint-url",
-    "bucket_name": "ipfs-s3-bucket-name",
-    "access_key": "ipfs-s3-access-key",
-    "secret_key": "ipfs-s3-secret-key"
+  "ipfs_unpinning": {
+    "enabled": "ipfs-unpinning-enabled",
+    "unpin_after": "ipfs-unpin-after"
   },
   "anchor_chain_rpc": {
     "full_nodes": [{
-      "url": "https://prost-rpc-url",
-      "rate_limit": {
-        "requests_per_second": "prost-rpc-rate-limit"
-      }
+      "url": "https://prost-rpc-url"
     }],
     "retry": 5,
     "request_time_out": 5,
@@ -161,5 +132,6 @@
     "read_timeout": 60,
     "write_timeout": 60
   },
-  "node_version": "v1.2"
+  "node_version": "v1.2",
+  "health_report_interval": 60,
 }

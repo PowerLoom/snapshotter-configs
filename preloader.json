@@ -1,17 +1,10 @@
 {
     "preloaders": [
         {
-          "task_type": "block_details",
-          "module": "snapshotter.utils.preloaders.block_details.preloader",
-          "class_name": "BlockDetailsPreloader"
-        },
-        {
           "task_type": "eth_price",
           "module": "computes.preloaders.eth_price.preloader",
           "class_name": "EthPricePreloader"
         }
-    ],
-    "delegate_tasks": [
     ],
     "timeout": 60
 }

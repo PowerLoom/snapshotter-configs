@@ -133,5 +133,5 @@
     "write_timeout": 60
   },
   "node_version": "v1.2",
-  "health_report_interval": 60,
+  "health_report_interval": 60
 }

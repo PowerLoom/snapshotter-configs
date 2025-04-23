@@ -1,0 +1,14 @@
+{
+    "filters": [
+      {
+        "filter_name": "uniswapv3_pool_events",
+        "abi_path": "computes/static/abis/UniswapV3Pool.json",
+        "events": ["Swap", "Mint", "Burn"],
+        "address_source": {
+          "config_file": "config/projects.example.json"
+        },
+        "redis_key_pattern": "filtered_events:{namespace}:{filter_name}"
+      }
+    ]
+  }
+  

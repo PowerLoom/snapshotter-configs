@@ -70,10 +70,6 @@
     "deadline_buffer": 1000,
     "day_counter_buffer": 0
   },
-  "callback_worker_config": {
-    "num_snapshot_workers": 4,
-    "num_aggregation_workers": 6
-  },
   "ipfs": {
     "url": "ipfs-writer-url",
     "url_auth": {

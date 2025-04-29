@@ -1,6 +1,16 @@
 {
   "config": [
     {
+      "project_name": "baseSnapshot:{poolAddress}:{Namespace}",
+      "preload_tasks": [
+        "eth_price"
+      ],
+      "processor": {
+        "module": "computes.pair_total_reserves",
+        "class_name": "PairTotalReservesProcessor"
+      }
+    },
+    {
       "project_name": "price:ETH:{Namespace}",
       "preload_tasks": [
         "eth_price"
@@ -8,6 +18,15 @@
       "processor": {
         "module": "computes.eth_price",
         "class_name": "EthPriceProcessor"
+      }
+    },
+    {
+      "project_name": "metadata:{poolAddress}:{Namespace}",
+      "preload_tasks": [
+      ],
+      "processor": {
+        "module": "computes.metadata",
+        "class_name": "MetadataProcessor"
       }
     }
   ]

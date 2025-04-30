@@ -28,6 +28,15 @@
         "module": "computes.metadata",
         "class_name": "MetadataProcessor"
       }
+    },
+    {
+      "project_name": "tokenPools:{tokenAddress}:{Namespace}",
+      "preload_tasks": [
+      ],
+      "processor": {
+        "module": "computes.token_pools",
+        "class_name": "TokenPoolsProcessor"
+      }
     }
   ]
 }

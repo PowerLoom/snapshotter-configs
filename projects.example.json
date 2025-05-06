@@ -12,6 +12,17 @@
       }
     },
     {
+      "project_name": "tradesSnapshot:{poolAddress}:{Namespace}",
+      "preload_tasks": [
+        "eth_price"
+      ],
+      "keep_previous_snapshot_data": true,
+      "processor": {
+        "module": "computes.trade_volume",
+        "class_name": "TradeVolumeProcessor"
+      }
+    },
+    {
       "project_name": "price:ETH:{Namespace}",
       "preload_tasks": [
         "eth_price"

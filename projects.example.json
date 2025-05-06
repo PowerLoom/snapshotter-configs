@@ -5,6 +5,7 @@
       "preload_tasks": [
         "eth_price"
       ],
+      "keep_previous_snapshot_data": true,
       "processor": {
         "module": "computes.pair_total_reserves",
         "class_name": "PairTotalReservesProcessor"
@@ -15,6 +16,7 @@
       "preload_tasks": [
         "eth_price"
       ],
+      "keep_previous_snapshot_data": false,
       "processor": {
         "module": "computes.eth_price",
         "class_name": "EthPriceProcessor"
@@ -24,6 +26,7 @@
       "project_name": "metadata:{poolAddress}:{Namespace}",
       "preload_tasks": [
       ],
+      "keep_previous_snapshot_data": false,
       "processor": {
         "module": "computes.metadata",
         "class_name": "MetadataProcessor"
@@ -33,6 +36,7 @@
       "project_name": "tokenPools:{tokenAddress}:{Namespace}",
       "preload_tasks": [
       ],
+      "keep_previous_snapshot_data": false,
       "processor": {
         "module": "computes.token_pools",
         "class_name": "TokenPoolsProcessor"

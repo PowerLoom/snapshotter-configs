@@ -18,8 +18,8 @@
       ],
       "keep_previous_snapshot_data": true,
       "processor": {
-        "module": "computes.trade_volume",
-        "class_name": "TradeVolumeProcessor"
+        "module": "computes.trades",
+        "class_name": "TradesProcessor"
       }
     },
     {

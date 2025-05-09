@@ -27,7 +27,7 @@
       "preload_tasks": [
         "eth_price"
       ],
-      "keep_previous_snapshot_data": false,
+      "keep_previous_snapshot_data": true,
       "processor": {
         "module": "computes.eth_price",
         "class_name": "EthPriceProcessor"

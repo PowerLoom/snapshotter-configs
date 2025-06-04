@@ -38,7 +38,7 @@
   },
   "logs": {
     "trace_enabled": false,
-    "write_to_files": true
+    "write_to_files": false
   },
   "projects_config_path": "config/projects.json",
   "preloaders_config_path": "config/preloaders.json",

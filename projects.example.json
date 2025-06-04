@@ -24,6 +24,18 @@
       }
     },
     {
+      "project_name": "activeTokens:{Namespace}",
+      "preload_tasks": [
+      ],
+      "keep_previous_snapshot_data": true,
+      "cache_cids": true,
+      "processor": {
+        "module": "computes.active_tokens",
+        "class_name": "ActiveTokensProcessor"
+      }
+    },
+
+    {
       "project_name": "tradesSnapshot:{poolAddress}:{Namespace}",
       "preload_tasks": [
         "eth_price"

@@ -13,6 +13,17 @@
       }
     },
     {
+      "project_name": "activePools:{Namespace}",
+      "preload_tasks": [
+      ],
+      "keep_previous_snapshot_data": true,
+      "cache_cids": true,
+      "processor": {
+        "module": "computes.active_pools",
+        "class_name": "ActivePoolsProcessor"
+      }
+    },
+    {
       "project_name": "tradesSnapshot:{poolAddress}:{Namespace}",
       "preload_tasks": [
         "eth_price"

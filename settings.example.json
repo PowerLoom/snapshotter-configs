@@ -3,7 +3,7 @@
   "signer_private_key": "signer-account-private-key",
   "core_api": {
     "host": "0.0.0.0",
-    "port": 9003,
+    "port": "core-api-port",
     "auth": {
       "enabled": false,
       "header_key": "X-API-KEY"
@@ -46,7 +46,7 @@
   "redis": {
     "host": "redis-host",
     "port": "redis-port",
-    "db": 0,
+    "db": "redis-db",
     "password": "redis-password",
     "ssl": false,
     "cluster_mode": false
@@ -54,7 +54,7 @@
   "redis_reader": {
     "host": "redis-host",
     "port": "redis-port",
-    "db": 0,
+    "db": "redis-db",
     "password": "redis-password"
   },
   "logs": {

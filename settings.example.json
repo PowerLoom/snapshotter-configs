@@ -129,5 +129,6 @@
     "write_timeout": 60
   },
   "node_version": "v1.2",
-  "health_report_interval": 60
+  "health_report_interval": 60,
+  "block_shift_for_bitmap_index": "block-shift-for-bitmap-index"
 }

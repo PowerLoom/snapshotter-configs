@@ -1,4 +1,14 @@
 {
   "config": [
+    {
+      "project_name": "allTradesSnapshot:{Namespace}",
+      "depends_on": "tradesSnapshot:{poolAddress}:{Namespace}",
+      "keep_previous_snapshot_data": true,
+      "cache_cids": false,
+      "processor": {
+        "module": "computes.aggregates.all_trades",
+        "class_name": "AllTradesProcessor"
+      }
+    }
   ]
 }

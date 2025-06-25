@@ -34,7 +34,9 @@
     "telegram_url": "https://telegram-reporting-url",
     "telegram_chat_id": "telegram-chat-id",
     "failure_report_frequency": 5,
-    "notification_cooldown": "telegram-notification-cooldown"
+    "notification_cooldown": "telegram-notification-cooldown",
+    "webhook_url": "webhook-url",
+    "webhook_service": "webhook-service"
   },
   "logs": {
     "trace_enabled": false,

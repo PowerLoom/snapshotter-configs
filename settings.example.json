@@ -161,5 +161,5 @@
     "read_timeout": 60,
     "write_timeout": 60
   },
-  "node_version": "v2.7.0"
+  "node_version": "v2.8.0"
 }

@@ -1,0 +1,508 @@
+Directory structure:
+└── config/
+    ├── aggregator.example.json
+    ├── auth_settings.example.json
+    ├── event_filters.example.json
+    ├── preloader.json
+    ├── projects.example.json
+    ├── settings.example.json
+    └── test.py
+
+================================================
+FILE: aggregator.example.json
+================================================
+{
+  "config": [
+    {
+      "project_name": "allTradesSnapshot:{Namespace}",
+      "depends_on": "tradesSnapshot:{poolAddress}:{Namespace}",
+      "keep_previous_snapshot_data": true,
+      "cache_cids": false,
+      "processor": {
+        "module": "computes.aggregates.all_trades",
+        "class_name": "AllTradesProcessor"
+      }
+    }
+  ]
+}
+
+
+================================================
+FILE: auth_settings.example.json
+================================================
+{
+  "redis": {
+      "host": "redis-host",
+      "port": "redis-port",
+      "db": 0,
+      "password": "redis-password"
+    },
+  "bind": {
+    "host": "0.0.0.0",
+    "port": 8555
+  }
+}
+
+
+
+================================================
+FILE: event_filters.example.json
+================================================
+{
+    "filters": [
+      {
+        "filter_name": "uniswapv3_pool_events",
+        "abi_path": "/app/computes/static/abis/UniswapV3Pool.json",
+        "event_topics": [
+            "0xc42079f94a6350d7e6235f29174924f928cc2ac818eb64fed8004e115fbcca67",
+            "0x7a53080ba414158be7ec69b987b5fb7d07dee101fe85488f0853ae16239d0bde",
+            "0x0c396cd989a39f4459b5fa1aed6a9a8dcdbc45908acfd67e028cd568da98982c"
+        ],
+        "redis_key_pattern": "events:{namespace}:address:{address}"
+      }
+    ]
+  }
+  
+
+
+================================================
+FILE: preloader.json
+================================================
+{
+    "preloaders": [
+        {
+          "task_type": "eth_price",
+          "module": "computes.preloaders.eth_price.preloader",
+          "class_name": "EthPricePreloader"
+        }
+    ],
+    "timeout": 60
+}
+
+
+
+================================================
+FILE: projects.example.json
+================================================
+{
+  "config": [
+    {
+      "project_name": "baseSnapshot:{poolAddress}:{Namespace}",
+      "preload_tasks": [
+        "eth_price"
+      ],
+      "keep_previous_snapshot_data": true,
+      "cache_cids": true,
+      "processor": {
+        "module": "computes.pair_total_reserves",
+        "class_name": "PairTotalReservesProcessor"
+      }
+    },
+    {
+      "project_name": "activePools:{Namespace}",
+      "preload_tasks": [
+      ],
+      "keep_previous_snapshot_data": true,
+      "cache_cids": true,
+      "processor": {
+        "module": "computes.active_pools",
+        "class_name": "ActivePoolsProcessor"
+      }
+    },
+    {
+      "project_name": "activeTokens:{Namespace}",
+      "preload_tasks": [
+      ],
+      "keep_previous_snapshot_data": true,
+      "cache_cids": true,
+      "processor": {
+        "module": "computes.active_tokens",
+        "class_name": "ActiveTokensProcessor"
+      }
+    },
+
+    {
+      "project_name": "tradesSnapshot:{poolAddress}:{Namespace}",
+      "preload_tasks": [
+        "eth_price"
+      ],
+      "keep_previous_snapshot_data": true,
+      "cache_cids": false,
+      "processor": {
+        "module": "computes.trades",
+        "class_name": "TradesProcessor"
+      }
+    },
+    {
+      "project_name": "price:ETH:{Namespace}",
+      "preload_tasks": [
+        "eth_price"
+      ],
+      "keep_previous_snapshot_data": true,
+      "cache_cids": false,
+      "processor": {
+        "module": "computes.eth_price",
+        "class_name": "EthPriceProcessor"
+      }
+    },
+    {
+      "project_name": "metadata:{poolAddress}:{Namespace}",
+      "preload_tasks": [
+      ],
+      "keep_previous_snapshot_data": false,
+      "cache_cids": false,
+      "processor": {
+        "module": "computes.metadata",
+        "class_name": "MetadataProcessor"
+      }
+    },
+    {
+      "project_name": "tokenPools:{tokenAddress}:{Namespace}",
+      "preload_tasks": [
+      ],
+      "keep_previous_snapshot_data": false,
+      "cache_cids": false,
+      "processor": {
+        "module": "computes.token_pools",
+        "class_name": "TokenPoolsProcessor"
+      }
+    }
+  ]
+}
+
+
+================================================
+FILE: settings.example.json
+================================================
+{
+  "namespace": "relevant-namespace",
+  "signer_private_key": "signer-account-private-key",
+  "core_api": {
+    "host": "0.0.0.0",
+    "port": "core-api-port",
+    "auth": {
+      "enabled": false,
+      "header_key": "X-API-KEY"
+    },
+    "public_rate_limit": "20000/day;300/minute;10/second"
+  },
+  "instance_id": "account-address",
+  "data_market": "data-market-contract",
+  "slot_id": "slot-id",
+  "async_task_config": {
+    "task_timeout": 300,
+    "task_cleanup_interval": 60
+  },
+  "local_collector_port": "local-collector-port",
+  "rpc": {
+    "full_nodes": [{
+      "url": "https://rpc-url"
+    }],
+    "archive_nodes": [],
+    "force_archive_blocks": 100,
+    "retry": 5,
+    "request_time_out": 5,
+    "skip_epoch_threshold_blocks": 30,
+    "polling_interval": 3,
+    "semaphore_value": 50,
+    "connection_limits":{
+      "max_connections": 100,
+      "max_keepalive_connections": 50,
+      "keepalive_expiry": 300
+    }
+  },
+  "rlimit": {
+    "file_descriptors": 40960
+  },
+  "reporting": {
+    "telegram_url": "https://telegram-reporting-url",
+    "telegram_chat_id": "telegram-chat-id",
+    "min_reporting_interval": 100
+  },
+  "redis": {
+    "host": "redis-host",
+    "port": "redis-port",
+    "db": "redis-db",
+    "password": "redis-password",
+    "ssl": false,
+    "cluster_mode": false
+  },
+  "redis_reader": {
+    "host": "redis-host",
+    "port": "redis-port",
+    "db": "redis-db",
+    "password": "redis-password"
+  },
+  "logs": {
+    "debug_mode": false,
+    "write_to_files": true
+  },
+  "projects_config_path": "config/projects.json",
+  "aggregator_config_path": "config/aggregator.json",
+  "preloader_config_path": "config/preloader.json",
+  "protocol_state": {
+    "abi": "snapshotter/static/abis/ProtocolContract.json",
+    "address": "protocol-state-contract",
+    "deadline_buffer": 1000,
+    "day_counter_buffer": 0
+  },
+  "ipfs": {
+    "url": "ipfs-writer-url",
+    "url_auth": {
+      "apiKey": "ipfs-writer-key",
+      "apiSecret": "ipfs-writer-secret"
+    },
+    "reader_url": "ipfs-reader-url",
+    "reader_url_auth": {
+      "apiKey": "ipfs-reader-key",
+      "apiSecret": "ipfs-reader-secret"
+    },
+    "write_rate_limit": {
+      "req_per_sec": 10,
+      "burst": 10
+    },
+    "timeout": 60,
+    "connection_limits":{
+      "max_connections": 100,
+      "max_keepalive_connections": 50,
+      "keepalive_expiry": 300
+    },
+    "remote_pinning": {
+      "enabled": false,
+      "service_name": "",
+      "service_endpoint": "",
+      "service_token": "",
+      "background_pinning": false
+    },
+    "s3": {
+      "enabled": "ipfs-s3-config-enabled",
+      "endpoint_url": "ipfs-s3-endpoint-url",
+      "bucket_name": "ipfs-s3-bucket-name",
+      "access_key": "ipfs-s3-access-key",
+      "secret_key": "ipfs-s3-secret-key"
+    }
+  },
+  "ipfs_unpinning": {
+    "enabled": "ipfs-unpinning-enabled",
+    "unpin_after": "ipfs-unpin-after"
+  },
+  "anchor_chain_rpc": {
+    "full_nodes": [{
+      "url": "https://prost-rpc-url"
+    }],
+    "retry": 5,
+    "request_time_out": 5,
+    "connection_limits":{
+      "max_connections": 100,
+      "max_keepalive_connections": 50,
+      "keepalive_expiry": 300
+    }
+  },
+  "httpx":{
+    "pool_timeout": 10,
+    "connect_timeout": 10,
+    "read_timeout": 60,
+    "write_timeout": 60
+  },
+  "node_version": "v1.2",
+  "health_report_interval": 60,
+  "block_shift_for_bitmap_index": "block-shift-for-bitmap-index"
+}
+
+
+
+================================================
+FILE: test.py
+================================================
+# https://ipfs.io/ipfs/bafkreicdywe3fj2zsjfdqbdfkf6scjwwxfhnag4exahyha3bmhbuwzcpfq
+import requests
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import logging
+import time
+
+# Set up logging
+logging.basicConfig(level=logging.INFO, 
+                   format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+
+
+def fetch_ipfs_data(cid):
+    url = f"https://ipfs.io/ipfs/{cid}"
+    try:
+        response = requests.get(url, timeout=30)
+        
+        # Check if request was successful
+        if response.status_code != 200:
+            logger.error(f"HTTP {response.status_code} for CID {cid}: "
+                         f"{response.text[:200]}")
+            raise Exception(f"HTTP {response.status_code}: {response.text[:100]}")
+        
+        # Check if response has content
+        if not response.content:
+            logger.error(f"Empty response for CID {cid}")
+            raise Exception("Empty response from IPFS")
+        
+        # Log response info
+        content_type = response.headers.get('Content-Type', 'unknown')
+        logger.debug(f"Response for {cid}: {len(response.content)} bytes, "
+                     f"Content-Type: {content_type}")
+        
+        # Try to parse JSON
+        try:
+            data = response.json()
+            return data
+        except ValueError as e:
+            logger.error(f"JSON parsing error for CID {cid}: {e}")
+            logger.error(f"Response content (first 500 chars): "
+                         f"{response.text[:500]}")
+            raise Exception(f"Invalid JSON response: {e}")
+            
+    except requests.exceptions.RequestException as e:
+        logger.error(f"Request error for CID {cid}: {e}")
+        raise Exception(f"Request failed: {e}")
+
+
+def collect_snapshot_chain(initial_cid, target_epoch):
+    """Collect all CIDs in the snapshot chain down to target epoch"""
+    cids_to_fetch = []
+    current_cid = initial_cid
+    
+    logger.info(f"Starting snapshot chain collection from {initial_cid}")
+    logger.info(f"Target epoch: {target_epoch}")
+    
+    # First, we need to sequentially follow the chain to collect all CIDs
+    iteration = 0
+    while True:
+        iteration += 1
+        logger.info(f"Chain iteration {iteration}: Processing CID {current_cid}")
+        
+        try:
+            # Fetch current snapshot to get the next CID in chain
+            data = fetch_ipfs_data(current_cid)
+            cids_to_fetch.append(current_cid)
+            
+            last_epoch = data["epoch"]["begin"]
+            logger.info(f"Last epoch: {last_epoch}, Current CID: {current_cid}")
+            
+            updated = False
+            if "previousSnapshots" in data and data["previousSnapshots"]:
+                prev_count = len(data['previousSnapshots'])
+                logger.info(f"Found {prev_count} previous snapshots")
+                
+                for epoch_id, cid in data["previousSnapshots"][::-1]:
+                    logger.debug(f"Checking epoch {epoch_id} (target: {target_epoch})")
+                    if epoch_id >= target_epoch:
+                        cids_to_fetch.append(cid)
+                        last_epoch = epoch_id
+                        logger.info(f"Last epoch: {last_epoch}, Current CID: {cid}")
+                        updated = True
+                    else:
+                        logger.debug(f"Skipping epoch {epoch_id} (below target)")
+            else:
+                logger.warning(f"No previousSnapshots found in data for CID "
+                              f"{current_cid}")
+
+            if not updated:
+                logger.info(f"Current epoch: {last_epoch} is less than target "
+                           f"epoch: {target_epoch}, stopping chain collection")
+                break
+             
+            current_cid = cids_to_fetch[-1]
+            logger.info(f"Next CID in chain: {current_cid}")
+            
+            # Add small delay to avoid overwhelming IPFS gateway
+            time.sleep(0.1)
+            
+        except Exception as e:
+            logger.error(f"Error processing CID {current_cid} in chain "
+                        f"collection: {e}")
+            break
+    
+    logger.info(f"Chain collection completed. Found {len(cids_to_fetch)} "
+               f"total CIDs")
+    return cids_to_fetch
+
+
+def fetch_all_snapshots_parallel(cids_to_fetch):
+    """Fetch all snapshots in parallel"""
+    logger.info(f"Starting parallel fetch of {len(cids_to_fetch)} snapshots")
+    cids_to_fetch = list(set(cids_to_fetch))
+    all_snapshot_data = {}
+    failed_cids = []
+    
+    # Reduced workers to be gentler on IPFS
+    with ThreadPoolExecutor(max_workers=5) as executor:
+        # Submit all fetch tasks
+        future_to_cid = {executor.submit(fetch_ipfs_data, cid): cid 
+                        for cid in cids_to_fetch}
+        
+        # Collect results as they complete
+        completed = 0
+        for future in as_completed(future_to_cid):
+            cid = future_to_cid[future]
+            completed += 1
+            try:
+                data = future.result()
+                all_snapshot_data[cid] = data
+            except Exception as exc:
+                logger.error(f"CID {cid} generated an exception: {exc}")
+                failed_cids.append(cid)
+    
+    if failed_cids:
+        logger.warning(f"Failed to fetch {len(failed_cids)} CIDs: {failed_cids}")
+    
+    success_count = len(all_snapshot_data)
+    total_count = len(cids_to_fetch)
+    logger.info(f"Parallel fetch completed. Successfully fetched "
+               f"{success_count}/{total_count} snapshots")
+    return all_snapshot_data
+
+
+# Main execution
+trade_volume = 0
+current_epoch = 22815213
+time_in_seconds = 5000
+target_epoch = current_epoch - int(time_in_seconds / (12.0))
+print(f"Target epoch: {target_epoch}")
+initial_cid = "bafkreicayflt7vir5dlxhuwgxcvbfclkeftbbo5zhtyjsgijmajlpt2xoe"
+
+logger.info("=== Starting IPFS Snapshot Processing ===")
+logger.info(f"Initial CID: {initial_cid}")
+logger.info(f"Current epoch: {current_epoch}")
+logger.info(f"Target epoch: {target_epoch}")
+
+# First, collect all CIDs in the snapshot chain
+logger.info("=== Phase 1: Collecting snapshot chain ===")
+cids_in_chain = list(set(collect_snapshot_chain(initial_cid, target_epoch)))
+logger.info(f"Found {len(cids_in_chain)} snapshots in chain")
+
+# Now fetch all snapshots in parallel (re-fetching for parallel processing)
+logger.info("=== Phase 2: Parallel fetching ===")
+all_data = fetch_all_snapshots_parallel(cids_in_chain)
+
+# Process all the fetched data to calculate trade volume
+logger.info("=== Phase 3: Processing trade volume ===")
+processed_count = 0
+trade_volumes = []
+for cid in cids_in_chain:  # Process in original chain order
+    if cid in all_data and "token1TradeVolumeUSD" in all_data[cid]:
+        volume = all_data[cid]["totalTrade"]
+        trade_volumes.append(volume)
+        logger.info(f"Volume: {volume}, CID: {cid}")
+        processed_count += 1
+    else:
+        logger.warning(f"Skipping CID {cid[:12]} - no data or missing "
+                      f"totalTrade")
+
+print(trade_volumes)
+logger.info("=== Final Results ===")
+logger.info(f"Processed {processed_count} snapshots successfully")
+logger.info(f"Final trade volume: {trade_volume}")
+
+
+
+
+
+
+
+

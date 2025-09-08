@@ -1,6 +1,6 @@
 {
   "config": [{
-      "project_type": "pairContract_pair_total_reserves",
+      "project_type": "baseSnapshot",
       "processor":{
         "module": "computes.pair_total_reserves",
         "class_name": "PairTotalReservesProcessor"
@@ -11,10 +11,10 @@
       ]
     },
     {
-      "project_type": "pairContract_trade_volume",
+      "project_type": "tradesSnapshot",
         "processor":{
-          "module": "computes.trade_volume",
-          "class_name": "TradeVolumeProcessor"
+          "module": "computes.trades",
+          "class_name": "TradesProcessor"
         },
       "preload_tasks": [
         "eth_price",

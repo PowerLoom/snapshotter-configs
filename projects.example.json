@@ -9,17 +9,6 @@
         "eth_price",
         "block_details"
       ]
-    },
-    {
-      "project_type": "tradesSnapshot",
-        "processor":{
-          "module": "computes.trades",
-          "class_name": "TradesProcessor"
-        },
-      "preload_tasks": [
-        "eth_price",
-        "block_details"
-      ]
     }
   ]
 }

@@ -36,7 +36,7 @@
     },
 
     {
-      "project_name": "tradesSnapshot:{dataMarketAddress}:{Namespace}",
+      "project_name": "tradesSnapshot:{poolAddress}:{Namespace}",
       "preload_tasks": [
         "eth_price"
       ],

@@ -13,7 +13,7 @@
       }
     },
     {
-      "project_name": "activePools:{Namespace}",
+      "project_name": "activePools:{dataMarketAddress}:{Namespace}",
       "preload_tasks": [
       ],
       "keep_previous_snapshot_data": true,
@@ -24,7 +24,7 @@
       }
     },
     {
-      "project_name": "activeTokens:{Namespace}",
+      "project_name": "activeTokens:{dataMarketAddress}:{Namespace}",
       "preload_tasks": [
       ],
       "keep_previous_snapshot_data": true,
@@ -36,7 +36,7 @@
     },
 
     {
-      "project_name": "tradesSnapshot:{poolAddress}:{Namespace}",
+      "project_name": "tradesSnapshot:{dataMarketAddress}:{Namespace}",
       "preload_tasks": [
         "eth_price"
       ],
